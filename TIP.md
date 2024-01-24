@@ -8,3 +8,11 @@
 - [mui-custom](https://www.youtube.com/watch?v=HsdjivqQ7BA)
 - [cdn-pure2](https://cdnjs.cloudflare.com/ajax/libs/pure/3.0.0/grids-responsive.css)
 - [cdn-mui](https://unpkg.com/@mui/material@5.15.6/umd/material-ui.development.js)
+- [bootstrap](https://getbootstrap.com/)
+- [livesasscompiler위치](https://wazacs.tistory.com/45)
+- [figma-htmltodesign](https://www.youtube.com/watch?v=7dltJBH14g8)
+
+## 할일
+
+1. figma활용하여 정리
+2. header부터 만들면서 원본 완성 시 > component로 분할 > github에 commit 남기기
