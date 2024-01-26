@@ -1,0 +1,163 @@
+header#header-nav {
+    // color: red;
+    // 반응형 처리 때문에 넣지 말자
+    // min-width: 1450px;
+    min-width: 300px;
+    display: flex;
+    padding: 0 50px 0 50px;
+    // 임시로 나중에 padding을 처리
+    height: 100px;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+
+    &.on {
+        border-bottom: 1px solid transparent;
+        background: transparent;
+    }
+
+    .logo {
+        a {
+            display: block;
+
+            img {
+                width: 194px;
+                // reset
+                border: 0 none;
+                vertical-align: top;
+            }
+        }
+    }
+
+    .gnb {
+        // position: relative;
+        // width: auto;
+        // width: 1200px;
+        // margin: 0 auto;
+        padding: 0 60px;
+
+        ul {
+            // height: auto;
+            // overflow: initial;
+            // border: none;
+            display: flex;
+
+            li {
+                // display: inline-block;
+                padding: 0 15px;
+                transition: all 0.2s;
+
+                @media (min-width: 1700px) {
+                    padding: 0 25px;
+                }
+
+                a {
+                    // position: relative;
+                    display: inline-block;
+                    padding: 25.5px 0;
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #242424;
+                    text-align: center;
+                    line-height: 49px;
+                }
+
+                .gnb-deps1 {
+                    display: none;
+
+                    ul {
+                        li {
+                            a {
+                            }
+
+                            .gnb-deps2 {
+                                li {
+                                    a {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .menu {
+        ul {
+            transition: all 0.2s;
+
+            li {
+                display: inline-block;
+                padding: 0 18px;
+                // 첫번째만넣기
+                // cursor: pointer;
+                // flex처리
+                position: relative;
+
+                @media (min-width: 1700px) {
+                    padding: 0 18px;
+                }
+
+                img {
+                    display: inline-block;
+                    // border: 0 none;
+                    // vertical-align: top;
+                }
+
+                span {
+                    position: absolute;
+                    top: 33px;
+                    left: 0;
+                    width: 100%;
+                    height: 20px;
+                    line-height: 20px;
+                    text-align: center;
+                    color: #222;
+                    font-size: 14px;
+                    white-space: nowrap;
+                }
+
+                a {
+                    display: inline-block;
+                    width: 33px;
+                    height: 26px;
+                    // padding: 0 3px;
+                    // color: #888888;
+                    // font-size: 11px;
+
+                    span {
+                        // position: absolute;
+                        width: 100%;
+                        height: 20px;
+                        line-height: 20px;
+                        text-align: center;
+                        color: #222;
+                        font-size: 14px;
+                        white-space: nowrap;
+                    }
+                }
+
+                .btn-login {
+                    background: url("/assets/icon/icon-login-black.png")
+                        no-repeat center 0;
+                }
+                .btn-mypage {
+                    background: url("/assets/icon/icon-mypage-black.png")
+                        no-repeat center 0;
+                }
+                .btn-cart {
+                    background: url("/assets/icon/icon-cart-black.png")
+                        no-repeat center 0;
+                }
+                .btn-service {
+                    background: url("/assets/icon/icon-service-black.png")
+                        no-repeat center 0;
+                }
+            }
+        }
+    }
+}
