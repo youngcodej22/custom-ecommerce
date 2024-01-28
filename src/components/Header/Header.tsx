@@ -18,7 +18,7 @@ const Header = () => {
         <>
             {/* <header className="on"> */}
             <header id="header-nav">
-                <div className="logo flex-center">
+                <div className="logo">
                     <a href="">
                         <img src={logoBlackPC} alt="로고" />
                     </a>
@@ -358,7 +358,7 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="menu flex-center">
+                <div className="menu">
                     <ul>
                         <li>
                             <img src={btnSearchBlack} alt="검색" />

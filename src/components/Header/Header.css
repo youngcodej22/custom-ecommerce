@@ -1,8 +1,5 @@
 header#header-nav {
   min-width: 300px;
-  display: flex;
-  padding: 0 50px 0 50px;
-  height: 100px;
   position: fixed;
   z-index: 3;
   width: 100%;
@@ -14,6 +11,12 @@ header#header-nav.on {
   border-bottom: 1px solid transparent;
   background: transparent;
 }
+header#header-nav .logo {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
 header#header-nav .logo a {
   display: block;
 }
@@ -23,10 +26,13 @@ header#header-nav .logo a img {
   vertical-align: top;
 }
 header#header-nav .gnb {
-  padding: 0 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 header#header-nav .gnb ul {
   display: flex;
+  justify-content: center;
 }
 header#header-nav .gnb ul li {
   padding: 0 15px;
@@ -49,6 +55,12 @@ header#header-nav .gnb ul li a {
 header#header-nav .gnb ul li .gnb-deps1 {
   display: none;
 }
+header#header-nav .menu {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translate(0%, -75%);
+}
 header#header-nav .menu ul {
   transition: all 0.2s;
 }
@@ -59,7 +71,7 @@ header#header-nav .menu ul li {
 }
 @media (min-width: 1700px) {
   header#header-nav .menu ul li {
-    padding: 0 18px;
+    padding: 0 21px;
   }
 }
 header#header-nav .menu ul li img {

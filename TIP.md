@@ -14,6 +14,7 @@
 -   [scss media](https://chaewonkong.github.io/posts/scss-media-query.html)
 -   [scss media2](https://eunhee-programming.tistory.com/178)
 -   [dl dt dd](https://aoa.gitbook.io/skymimo/aoa-2019/tips-2/dl-dt-dd-.)
+-   [flex 가이드](https://www.heropy.dev/p/Ha29GI)
 
 ## 할일
 
