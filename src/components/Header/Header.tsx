@@ -1,34 +1,50 @@
-import "./Header.scss";
-import logoBlackPC from "/assets/logo/logo_black_pc.png";
-import logoWhitePC from "/assets/logo/logo_white_pc.png";
-import btnClose from "/assets/icon/icon-close.png";
-import btnSearchBlack from "/assets/icon/icon-search-black.png";
-// import btnSearch from "/assets/icon/icon-search.png";
-// import btnCartBlack from "/assets/icon/icon-cart-black.png";
-// import btnCart from "/assets/icon/icon-cart.png";
-// import btnMypageBlack from "/assets/icon/icon-mypage-black.png";
-// import btnMypage from "/assets/icon/icon-mypage.png";
-// import btnLoginBlack from "/assets/icon/icon-login-black.png";
-// import btnLogin from "/assets/icon/icon-login.png";
-// import btnServiceBlack from "/assets/icon/icon-service-black.png";
-// import btnService from "/assets/icon/icon-service.png";
+import { useState, useEffect } from 'react';
+import logoBlackPC from '/assets/logo/logo_black_pc.png';
+import logoWhitePC from '/assets/logo/logo_white_pc.png';
+import btnClose from '/assets/icon/icon-close.png';
+import btnSearchBlack from '/assets/icon/icon-search-black.png';
+import btnSearch from '/assets/icon/icon-search.png';
+import btnCartBlack from '/assets/icon/icon-cart-black.png';
+import btnCart from '/assets/icon/icon-cart.png';
+import btnMypageBlack from '/assets/icon/icon-mypage-black.png';
+import btnMypage from '/assets/icon/icon-mypage.png';
+import btnLoginBlack from '/assets/icon/icon-login-black.png';
+import btnLogin from '/assets/icon/icon-login.png';
+import btnServiceBlack from '/assets/icon/icon-service-black.png';
+import btnService from '/assets/icon/icon-service.png';
+
+import './Header.scss';
 
 const Header = () => {
+    const [isOn, setIsOn] = useState(true);
+
+    useEffect(() => {
+        // Function to handle scroll events
+        const handleScroll = () => {
+            // Check if the user has scrolled down, and update the state accordingly
+            console.log('scroll', window.scrollY);
+            if (window.scrollY > 20) {
+                setIsOn(false);
+            } else {
+                setIsOn(true);
+            }
+        };
+
+        // Attach the event listener when the component mounts
+        window.addEventListener('scroll', handleScroll);
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
             {/* <header className="on"> */}
-            <header id="header-nav">
+            <header id="header-nav" className={isOn ? 'on' : ''}>
                 <div className="logo">
-                    <a href="">
-                        <img src={logoBlackPC} alt="로고" />
-                    </a>
-                    <a href="">
-                        <img
-                            src={logoWhitePC}
-                            alt="로고"
-                            style={{ display: "none" }}
-                        />
-                    </a>
+                    <a href="">{isOn ? <img src={logoWhitePC} alt="로고" /> : <img src={logoBlackPC} alt="로고" />}</a>
                 </div>
                 <div className="gnb">
                     <ul>
@@ -361,32 +377,36 @@ const Header = () => {
                 <div className="menu">
                     <ul>
                         <li>
-                            <img src={btnSearchBlack} alt="검색" />
+                            {isOn ? <img src={btnSearch} alt="검색" /> : <img src={btnSearchBlack} alt="검색" />}
                             <span>검색</span>
                         </li>
                         <li>
                             <a href="" className="btn-login">
+                                {isOn ? <img src={btnLogin} alt="검색" /> : <img src={btnLoginBlack} alt="검색" />}
                                 <span>로그인</span>
                             </a>
                         </li>
                         <li>
                             <a href="" className="btn-mypage">
+                                {isOn ? <img src={btnMypage} alt="검색" /> : <img src={btnMypageBlack} alt="검색" />}
                                 <span>마이페이지</span>
                             </a>
                         </li>
                         <li>
                             <a href="" className="btn-cart">
+                                {isOn ? <img src={btnCart} alt="검색" /> : <img src={btnCartBlack} alt="검색" />}
                                 <span>장바구니</span>
                             </a>
                         </li>
                         <li>
                             <a href="" className="btn-service">
+                                {isOn ? <img src={btnService} alt="검색" /> : <img src={btnServiceBlack} alt="검색" />}
                                 <span>고객센터</span>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div className="search-popup" style={{ display: "none" }}>
+                <div className="search-popup" style={{ display: 'none' }}>
                     <form
                         action=""
                         name="formSearch"
@@ -420,15 +440,8 @@ const Header = () => {
                                     alt="검색"
                                 />
                             </div>
-                            <div
-                                className="search-keywordList-wrap"
-                                style={{ display: "none" }}
-                            >
-                                <input
-                                    type="hidden"
-                                    name="recentCount"
-                                    value="10"
-                                />
+                            <div className="search-keywordList-wrap" style={{ display: 'none' }}>
+                                <input type="hidden" name="recentCount" value="10" />
                                 <div className="search-keywordList">
                                     <div className="search-recent-wrap">
                                         <dl>
@@ -437,10 +450,7 @@ const Header = () => {
                                         </dl>
                                     </div>
                                     <div className="search-close-wrap">
-                                        <button
-                                            type="button"
-                                            className="btn-search-close"
-                                        >
+                                        <button type="button" className="btn-search-close">
                                             <strong>닫기</strong>
                                         </button>
                                     </div>

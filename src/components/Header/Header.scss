@@ -18,6 +18,14 @@ header#header-nav {
     &.on {
         border-bottom: 1px solid transparent;
         background: transparent;
+
+        .gnb a {
+            color:#fff;
+        }
+
+        .menu ul li span {
+            color: #fff;
+        }
     }
 
     .logo {
@@ -75,6 +83,24 @@ header#header-nav {
                     line-height: 49px;
                 }
 
+                &:nth-child(2) {
+
+                    & > a {
+                        position: relative;
+                    }
+
+                    & > a::before {
+                        content: '';
+                        width: 8px;
+                        height: 8px;
+                        position: absolute;
+                        top: 35px;
+                        right: -12px;
+                        border-radius: 100%;
+                        background-color: #0ad09c;
+                    }
+                }
+
                 .gnb-deps1 {
                     display: none;
 
@@ -101,6 +127,7 @@ header#header-nav {
         right: 50px;
         top: 50%;
         transform: translate(0%, -75%);
+
         ul {
             transition: all 0.2s;
 
@@ -114,6 +141,10 @@ header#header-nav {
 
                 @media (min-width: 1700px) {
                     padding: 0 21px;
+                }
+
+                &:first-child {
+                    cursor: pointer;
                 }
 
                 img {
@@ -155,22 +186,22 @@ header#header-nav {
                     }
                 }
 
-                .btn-login {
-                    background: url("/assets/icon/icon-login-black.png")
-                        no-repeat center 0;
-                }
-                .btn-mypage {
-                    background: url("/assets/icon/icon-mypage-black.png")
-                        no-repeat center 0;
-                }
-                .btn-cart {
-                    background: url("/assets/icon/icon-cart-black.png")
-                        no-repeat center 0;
-                }
-                .btn-service {
-                    background: url("/assets/icon/icon-service-black.png")
-                        no-repeat center 0;
-                }
+                // .btn-login {
+                //     background: url("/assets/icon/icon-login-black.png")
+                //         no-repeat center 0;
+                // }
+                // .btn-mypage {
+                //     background: url("/assets/icon/icon-mypage-black.png")
+                //         no-repeat center 0;
+                // }
+                // .btn-cart {
+                //     background: url("/assets/icon/icon-cart-black.png")
+                //         no-repeat center 0;
+                // }
+                // .btn-service {
+                //     background: url("/assets/icon/icon-service-black.png")
+                //         no-repeat center 0;
+                // }
             }
         }
     }
