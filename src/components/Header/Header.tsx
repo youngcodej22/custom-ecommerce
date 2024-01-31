@@ -17,13 +17,13 @@ import './Header.scss';
 
 const Header = () => {
     const [isOn, setIsOn] = useState(true);
+    const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
         // Function to handle scroll events
         const handleScroll = () => {
             // Check if the user has scrolled down, and update the state accordingly
-            console.log('scroll', window.scrollY);
-            if (window.scrollY > 20) {
+            if (window.scrollY > 80) {
                 setIsOn(false);
             } else {
                 setIsOn(true);
@@ -39,6 +39,19 @@ const Header = () => {
         };
     }, []);
 
+    const handleMouseEnter = () => {
+        setIsOn(false)
+        setIsActive(true)
+    }
+
+    const handleMouseLeave = () => {
+        setIsOn(true)
+        setIsActive(false)
+    }
+
+
+
+
     return (
         <>
             {/* <header className="on"> */}
@@ -47,9 +60,9 @@ const Header = () => {
                     <a href="">{isOn ? <img src={logoWhitePC} alt="로고" /> : <img src={logoBlackPC} alt="로고" />}</a>
                 </div>
                 <div className="gnb">
-                    <ul>
-                        <li>
-                            <a href="">BRAND</a>
+                    <ul className={isActive ? 'gnb-wrap active': 'gnb-wrap'}>
+                        <li className='gnb-li brand' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                            <a className='gnb-link' href="">BRAND</a>
                             <div className="gnb-deps1">
                                 <ul>
                                     <li>
@@ -67,8 +80,8 @@ const Header = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li>
-                            <a href="">NEW</a>
+                        <li className='gnb-li new' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                            <a className='gnb-link' href="">NEW</a>
                             <div className="gnb-deps1">
                                 <ul>
                                     <li>
@@ -130,8 +143,8 @@ const Header = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li>
-                            <a href="">WOMEN</a>
+                        <li className='gnb-li women' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                            <a className='gnb-link' href="">WOMEN</a>
                             <div className="gnb-deps1">
                                 <ul>
                                     <li>
@@ -182,8 +195,8 @@ const Header = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li>
-                            <a href="">MEN</a>
+                        <li className='gnb-li men' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                            <a className='gnb-link' href="">MEN</a>
                             <div className="gnb-deps1">
                                 <ul>
                                     <li>
@@ -228,8 +241,8 @@ const Header = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li>
-                            <a href="">ACC</a>
+                        <li className='gnb-li acc' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                            <a className='gnb-link' href="">ACC</a>
                             <div className="gnb-deps1">
                                 <ul>
                                     <li>
@@ -300,8 +313,8 @@ const Header = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li>
-                            <a href="">OUTLET</a>
+                        <li className='gnb-li outlet' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                            <a className='gnb-link' href="">OUTLET</a>
                             <div className="gnb-deps1">
                                 <ul>
                                     <li>
@@ -363,14 +376,14 @@ const Header = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li>
-                            <a href="">PROMOTION</a>
+                        <li className="gnb-li" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                            <a className='gnb-link' href="">PROMOTION</a>
                         </li>
-                        <li>
-                            <a href="">REVIEW</a>
+                        <li className="gnb-li" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                            <a className='gnb-link' href="">REVIEW</a>
                         </li>
-                        <li>
-                            <a href="">STORE</a>
+                        <li className="gnb-li" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                            <a className='gnb-link' href="">STORE</a>
                         </li>
                     </ul>
                 </div>

@@ -15,11 +15,43 @@ header#header-nav {
     background: #fff;
     border-bottom: 1px solid #eee;
 
+    // .box {
+    //     position: absolute;
+    //     top: 100%;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 183px;
+    //     margin: 0 auto;
+    //     // background: none;
+    //     background: red;
+    //     border: 0;
+    //     // transform: translate(0, -50%);
+    //     // z-index: 33;
+    // }
+
+    // ! 이거 안됨 바꾸자
+    // &::before {
+    //     content: "";
+    //     display: block;
+    //     position: absolute;
+    //     // top: 50%;
+    //     top: 100%;
+    //     left: 0;
+    //     // width: 1200px;
+    //     width: 100%;
+    //     min-height: 250px;
+    //     margin: 0 auto;
+    //     background: #fff;
+    //     border-top: 1px solid #f7f7f7;
+    //     padding: 27px 0 70px;
+    //     z-index: 1;
+    // }
+
     &.on {
         border-bottom: 1px solid transparent;
         background: transparent;
 
-        .gnb a {
+        .gnb .gnb-wrap .gnb-link {
             color:#fff;
         }
 
@@ -56,24 +88,48 @@ header#header-nav {
         margin: 0 auto;
         // padding: 0 60px;
 
-        ul {
+        .gnb-wrap {
             // height: auto;
             // overflow: initial;
             // border: none;
             display: flex;
             justify-content: center;
 
+            &::before {
+                content: "";
+                display: none;
+                position: absolute;
+                // top: 50%;
+                top: 100%;
+                left: 0;
+                // width: 1200px;
+                width: 100%;
+                min-height: 250px;
+                margin: 0 auto;
+                background: #fff;
+                border-top: 1px solid #f7f7f7;
+                // padding: 27px 0 70px;
+                z-index: 1;
+            }
+
+            &.active::before {
+                display: block;
+            }
+
             li {
                 // display: inline-block;
-                padding: 0 15px;
+                position: relative;
+                // padding: 0 15px;
+                margin: 0 15px;
                 transition: all 0.2s;
 
                 @media (min-width: 1700px) {
-                    padding: 0 25px;
+                    // padding: 0 25px;
+                    margin: 0 25px;
                 }
 
-                a {
-                    // position: relative;
+                .gnb-link {
+                    position: relative;
                     display: inline-block;
                     padding: 25.5px 0;
                     font-size: 16px;
@@ -83,7 +139,7 @@ header#header-nav {
                     line-height: 49px;
                 }
 
-                &:nth-child(2) {
+                &.new {
 
                     & > a {
                         position: relative;
@@ -103,10 +159,41 @@ header#header-nav {
 
                 .gnb-deps1 {
                     display: none;
+                    // position: absolute;
+                    // top: 100%;
+                    // left: 50%;
+                    // transform: translate(-50%, 0);
+                    // width: 100%;
+                    // min-height: 166px;
+                    // background-color: #fff;
+                    // padding: 27px 0 70px;
+                    // border-top: 1px solid #f7f7f7;
 
                     ul {
+                        position: absolute;
+                        // top: 50%;
+                        // top: 100%;
+                        width: 1200px;
+                        // height: 183px;
+                        margin: 0 auto;
+                        background: none;
+                        border: 0;
+                        padding-top: 40px;
+                        // transform: translate(0, -50%);
+                        z-index: 2;
+
                         li {
+                            margin-left: 0;
+                            width: 160px;
+                            text-align: left;
+
                             a {
+                                display: inline-block;
+                                padding-bottom: 20px;
+                                font-size: 16px;
+                                font-weight: bold;
+                                color: inherit;
+
                             }
 
                             .gnb-deps2 {
@@ -119,7 +206,39 @@ header#header-nav {
                     }
                 }
             }
+            
+            // .brand:hover > a::after {
+            //     // ! border-bottom으로 인해 전체 box size가 변화가 생겨 로고가 움직임
+            //     // border-bottom: 4px solid #000;
+            //     content: '';
+            //     position: absolute;
+            //     left: 0;
+            //     bottom: 0;
+            //     display: inline-block;
+            //     width: 100%;
+            //     height: 4px;
+            //     background: #242424;
+            // }
+
+            .gnb-li:hover::after {
+                // ! border-bottom으로 인해 전체 box size가 변화가 생겨 로고가 움직임
+                // border-bottom: 4px solid #000;
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                display: inline-block;
+                width: 100%;
+                height: 4px;
+                background: #242424;
+            }
+
+            .brand:hover > .gnb-deps1 {
+                display: block;
+            }
         }
+
+        
     }
 
     .menu {

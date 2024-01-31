@@ -1,6 +1,6 @@
 #
 
-- [mackayson](https://www.mckayson.com/)\
+- [mackayson](https://www.mckayson.com/)
 - [m mack](https://m.mckayson.com/)
 - [recreate bootstrap](https://www.youtube.com/watch?v=TFxQ05_t0MQ)
 - [github-mui](https://github.com/mui/material-ui/blob/master/docs/pages/base-ui/react-button/%5BdocsTab%5D/index.js)
@@ -15,6 +15,7 @@
 - [scss media2](https://eunhee-programming.tistory.com/178)
 - [dl dt dd](https://aoa.gitbook.io/skymimo/aoa-2019/tips-2/dl-dt-dd-.)
 - [flex 가이드](https://www.heropy.dev/p/Ha29GI)
+- [mouse event](https://react.dev/reference/react-dom/components/common#handling-mouse-events)
 
 ## carousel
 
@@ -34,3 +35,8 @@
 
 1. figma활용하여 정리
 2. header부터 만들면서 원본 완성 시 > component로 분할 > github에 commit 남기기
+
+## error
+
+- [mouse event](https://velog.io/@rimo09/%EB%A7%88%EC%9A%B0%EC%8A%A4-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%A0%95%EB%B3%B5)
+- [classList 쓰지마 react](https://sylagape1231.tistory.com/59)
