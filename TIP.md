@@ -16,6 +16,8 @@
 - [dl dt dd](https://aoa.gitbook.io/skymimo/aoa-2019/tips-2/dl-dt-dd-.)
 - [flex 가이드](https://www.heropy.dev/p/Ha29GI)
 - [mouse event](https://react.dev/reference/react-dom/components/common#handling-mouse-events)
+- [transition 가능속성](https://guiyomi.tistory.com/131)
+- [참고-UI](https://codepen.io/kimyangsun/pen/RwNByrY)
 
 ## carousel
 
@@ -40,3 +42,22 @@
 
 - [mouse event](https://velog.io/@rimo09/%EB%A7%88%EC%9A%B0%EC%8A%A4-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%A0%95%EB%B3%B5)
 - [classList 쓰지마 react](https://sylagape1231.tistory.com/59)
+
+## inifinite loop 조심
+```jsx
+   // ! infinite loop 조심
+  onMouseEnter={handleMouseEnter(0)}
+  onMouseEnter={() => handleMouseEnter(0)}
+```
+
+## ref와 state
+https://bo5mi.tistory.com/215
+
+## clientwidth vs offsetwidth
+offsetWidth 속성은 요소의 가로 값(보더/패딩 포함) 
+clientWidth 속성은 요소의 가로 값(마진/보더 불포함)
+
+https://webstoryboy.co.kr/1739
+
+## ref 여러개 묶어서
+https://itprogramming119.tistory.com/entry/React-useRef-%EC%97%AC%EB%9F%AC%EA%B0%9C%EB%A5%BC-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%EB%8B%A4%EB%A3%A8%EA%B8%B0

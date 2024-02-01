@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import logoBlackPC from '/assets/logo/logo_black_pc.png';
 import logoWhitePC from '/assets/logo/logo_white_pc.png';
 import btnClose from '/assets/icon/icon-close.png';
@@ -16,17 +16,52 @@ import btnService from '/assets/icon/icon-service.png';
 import './Header.scss';
 
 const Header = () => {
-    const [isOn, setIsOn] = useState(true);
-    const [isActive, setIsActive] = useState(false);
+    const [isOn, setIsOn] = useState(false);
+    const [isActiveBg, setIsActiveBg] = useState(false);
+    const [isActive, setIsActive] = useState(null);
+    const [scrollY, setScrollY] = useState(window.scrollY);
+    const tabsliRef = useRef([]);
+    // const [tabs, setTabs] = useState([
+    //     {
+    //         title: 'brand',
+    //         id: 1,
+    //         isActive: false,
+    //     },
+    //     {
+    //         title: 'new',
+    //         id: 2,
+    //         isActive: false,
+    //     },
+    //     {
+    //         title: 'women',
+    //         id: 3,
+    //         isActive: false,
+    //     },
+    //     {
+    //         title: 'men',
+    //         id: 4,
+    //         isActive: false,
+    //     },
+    //     {
+    //         title: 'acc',
+    //         id: 5,
+    //         isActive: false,
+    //     },
+    //     {
+    //         title: 'outlet',
+    //         id: 6,
+    //         isActive: false,
+    //     },
+    // ]);
 
     useEffect(() => {
-        // Function to handle scroll events
         const handleScroll = () => {
-            // Check if the user has scrolled down, and update the state accordingly
-            if (window.scrollY > 80) {
-                setIsOn(false);
-            } else {
+            setScrollY(window.scrollY);
+
+            if (scrollY > 80) {
                 setIsOn(true);
+            } else {
+                setIsOn(false);
             }
         };
 
@@ -37,33 +72,100 @@ const Header = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [scrollY, isOn]);
 
-    const handleMouseEnter = () => {
-        setIsOn(false)
-        setIsActive(true)
-    }
+    const handleActiveBgEnter = () => {
+        setIsOn(true);
+        setIsActiveBg(true);
+    };
+    // const handleActiveBgLeave = () => {
+    //     setIsOn(true);
+    //     setIsActiveBg(false);
+    // };
 
-    const handleMouseLeave = () => {
-        setIsOn(true)
-        setIsActive(false)
-    }
+    const handleMouseEnter = index => {
+        // const navItem = e?.target;
+        // const boundingBox = navItem.getBoundingClientRect();
+        // const offsetLeft = boundingBox.left;
+        // const offsetWidth = boundingBox.width;
+        // const leftValue = offsetLeft + offsetWidth / 2;
+        // navItem.style.left = `${leftValue}px`;
 
+        // ! 여러개 ref를 배열로 관리
+        const tabsliRefList = tabsliRef.current[index];
 
+        let deps1UlElStyle = tabsliRefList.children[1].children[0].style;
+        let leftValue = tabsliRefList.offsetLeft;
 
+        // deps1UlElLeft = `${leftValue}px`;
+        deps1UlElStyle.setProperty('left', `${leftValue}px`);
+
+        setIsActive(index);
+        setIsOn(true);
+
+        if (scrollY === 0) {
+            setIsOn(true);
+        }
+
+        console.log('***', isOn);
+    };
+
+    const handleMouseLeave = e => {
+        setIsActive(null);
+
+        // if (scrollY > 0 && isOn) {
+        if (scrollY > 0) {
+            setIsOn(true);
+        } else {
+            setIsOn(false);
+        }
+        // e.target.style.left = 'auto';
+    };
+
+    const handleMouseEnterNoIdx = () => {
+        if (scrollY === 0) {
+            setIsOn(true);
+        }
+    };
+
+    const handleMouseLeaveNoIdx = () => {
+        if (scrollY > 0) {
+            setIsOn(true);
+        } else {
+            setIsOn(false);
+        }
+    };
 
     return (
         <>
             {/* <header className="on"> */}
-            <header id="header-nav" className={isOn ? 'on' : ''}>
+            <header id="header-nav" className={(isOn && scrollY > 0) || isOn ? 'on' : ''}>
                 <div className="logo">
-                    <a href="">{isOn ? <img src={logoWhitePC} alt="로고" /> : <img src={logoBlackPC} alt="로고" />}</a>
+                    <a href="">
+                        {(isOn && scrollY > 0) || isOn ? (
+                            <img src={logoBlackPC} alt="로고" />
+                        ) : (
+                            <img src={logoWhitePC} alt="로고" />
+                        )}
+                    </a>
                 </div>
                 <div className="gnb">
-                    <ul className={isActive ? 'gnb-wrap active': 'gnb-wrap'}>
-                        <li className='gnb-li brand' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <a className='gnb-link' href="">BRAND</a>
-                            <div className="gnb-deps1">
+                    <ul className={isActiveBg ? 'gnb-wrap active-bg' : 'gnb-wrap'} onMouseEnter={handleActiveBgEnter}>
+                        <li
+                            // ! infinite loop 조심
+                            // onMouseEnter={handleMouseEnter(0)}
+                            className="gnb-li brand"
+                            // onMouseEnter={e => handleMouseEnter(e, 0)}
+                            // onMouseLeave={e => handleMouseLeave(e)}
+                            onMouseEnter={() => handleMouseEnter(0)}
+                            onMouseLeave={handleMouseLeave}
+                            ref={el => (tabsliRef.current[0] = el)}
+                        >
+                            <a className="gnb-link" href="">
+                                BRAND
+                            </a>
+                            {/* <div className="gnb-deps1"> */}
+                            <div className={isActive === 0 ? 'gnb-deps1 active' : 'gnb-deps1'}>
                                 <ul>
                                     <li>
                                         <a href="">LOOKBOOK</a>
@@ -80,9 +182,16 @@ const Header = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li className='gnb-li new' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <a className='gnb-link' href="">NEW</a>
-                            <div className="gnb-deps1">
+                        <li
+                            className="gnb-li new"
+                            onMouseEnter={() => handleMouseEnter(1)}
+                            onMouseLeave={handleMouseLeave}
+                            ref={el => (tabsliRef.current[1] = el)}
+                        >
+                            <a className="gnb-link" href="">
+                                NEW
+                            </a>
+                            <div className={isActive === 1 ? 'gnb-deps1 active' : 'gnb-deps1'}>
                                 <ul>
                                     <li>
                                         <a href="">겨울 컬렉션</a>
@@ -143,9 +252,16 @@ const Header = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li className='gnb-li women' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <a className='gnb-link' href="">WOMEN</a>
-                            <div className="gnb-deps1">
+                        <li
+                            className="gnb-li women"
+                            onMouseEnter={() => handleMouseEnter(2)}
+                            onMouseLeave={handleMouseLeave}
+                            ref={el => (tabsliRef.current[2] = el)}
+                        >
+                            <a className="gnb-link" href="">
+                                WOMEN
+                            </a>
+                            <div className={isActive === 2 ? 'gnb-deps1 active' : 'gnb-deps1'}>
                                 <ul>
                                     <li>
                                         <a href="">상의</a>
@@ -195,9 +311,16 @@ const Header = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li className='gnb-li men' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <a className='gnb-link' href="">MEN</a>
-                            <div className="gnb-deps1">
+                        <li
+                            className="gnb-li men"
+                            onMouseEnter={() => handleMouseEnter(3)}
+                            onMouseLeave={handleMouseLeave}
+                            ref={el => (tabsliRef.current[3] = el)}
+                        >
+                            <a className="gnb-link" href="">
+                                MEN
+                            </a>
+                            <div className={isActive === 3 ? 'gnb-deps1 active' : 'gnb-deps1'}>
                                 <ul>
                                     <li>
                                         <a href="">상의</a>
@@ -241,9 +364,16 @@ const Header = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li className='gnb-li acc' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <a className='gnb-link' href="">ACC</a>
-                            <div className="gnb-deps1">
+                        <li
+                            className="gnb-li acc"
+                            onMouseEnter={() => handleMouseEnter(4)}
+                            onMouseLeave={handleMouseLeave}
+                            ref={el => (tabsliRef.current[4] = el)}
+                        >
+                            <a className="gnb-link" href="">
+                                ACC
+                            </a>
+                            <div className={isActive === 4 ? 'gnb-deps1 active' : 'gnb-deps1'}>
                                 <ul>
                                     <li>
                                         <a href="">모자</a>
@@ -313,9 +443,16 @@ const Header = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li className='gnb-li outlet' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <a className='gnb-link' href="">OUTLET</a>
-                            <div className="gnb-deps1">
+                        <li
+                            className="gnb-li outlet"
+                            onMouseEnter={() => handleMouseEnter(5)}
+                            onMouseLeave={handleMouseLeave}
+                            ref={el => (tabsliRef.current[5] = el)}
+                        >
+                            <a className="gnb-link" href="">
+                                OUTLET
+                            </a>
+                            <div className={isActive === 5 ? 'gnb-deps1 active' : 'gnb-deps1'}>
                                 <ul>
                                     <li>
                                         <a href="">여성</a>
@@ -376,44 +513,85 @@ const Header = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li className="gnb-li" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <a className='gnb-link' href="">PROMOTION</a>
+                        <li className="gnb-li promotion">
+                            <a
+                                className="gnb-link"
+                                href=""
+                                onMouseEnter={handleMouseEnterNoIdx}
+                                onMouseLeave={handleMouseLeaveNoIdx}
+                            >
+                                PROMOTION
+                            </a>
                         </li>
-                        <li className="gnb-li" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <a className='gnb-link' href="">REVIEW</a>
+                        <li className="gnb-li review">
+                            <a
+                                className="gnb-link"
+                                href=""
+                                onMouseEnter={handleMouseEnterNoIdx}
+                                onMouseLeave={handleMouseLeaveNoIdx}
+                            >
+                                REVIEW
+                            </a>
                         </li>
-                        <li className="gnb-li" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <a className='gnb-link' href="">STORE</a>
+                        <li className="gnb-li store">
+                            <a
+                                className="gnb-link"
+                                href=""
+                                onMouseEnter={handleMouseEnterNoIdx}
+                                onMouseLeave={handleMouseLeaveNoIdx}
+                            >
+                                STORE
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <div className="menu">
                     <ul>
                         <li>
-                            {isOn ? <img src={btnSearch} alt="검색" /> : <img src={btnSearchBlack} alt="검색" />}
+                            {(isOn && scrollY > 0) || isOn ? (
+                                <img src={btnSearchBlack} alt="검색" />
+                            ) : (
+                                <img src={btnSearch} alt="검색" />
+                            )}
                             <span>검색</span>
                         </li>
                         <li>
                             <a href="" className="btn-login">
-                                {isOn ? <img src={btnLogin} alt="검색" /> : <img src={btnLoginBlack} alt="검색" />}
+                                {(isOn && scrollY > 0) || isOn ? (
+                                    <img src={btnLoginBlack} alt="검색" />
+                                ) : (
+                                    <img src={btnLogin} alt="검색" />
+                                )}
                                 <span>로그인</span>
                             </a>
                         </li>
                         <li>
                             <a href="" className="btn-mypage">
-                                {isOn ? <img src={btnMypage} alt="검색" /> : <img src={btnMypageBlack} alt="검색" />}
+                                {(isOn && scrollY > 0) || isOn ? (
+                                    <img src={btnMypageBlack} alt="검색" />
+                                ) : (
+                                    <img src={btnMypage} alt="검색" />
+                                )}
                                 <span>마이페이지</span>
                             </a>
                         </li>
                         <li>
                             <a href="" className="btn-cart">
-                                {isOn ? <img src={btnCart} alt="검색" /> : <img src={btnCartBlack} alt="검색" />}
+                                {(isOn && scrollY > 0) || isOn ? (
+                                    <img src={btnCartBlack} alt="검색" />
+                                ) : (
+                                    <img src={btnCart} alt="검색" />
+                                )}
                                 <span>장바구니</span>
                             </a>
                         </li>
                         <li>
                             <a href="" className="btn-service">
-                                {isOn ? <img src={btnService} alt="검색" /> : <img src={btnServiceBlack} alt="검색" />}
+                                {(isOn && scrollY > 0) || isOn ? (
+                                    <img src={btnServiceBlack} alt="검색" />
+                                ) : (
+                                    <img src={btnService} alt="검색" />
+                                )}
                                 <span>고객센터</span>
                             </a>
                         </li>
