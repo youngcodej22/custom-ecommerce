@@ -20,6 +20,7 @@ const Header = () => {
     const [isActiveBg, setIsActiveBg] = useState(false);
     const [isActive, setIsActive] = useState(null);
     const [scrollY, setScrollY] = useState(window.scrollY);
+    // const [scrollY, setScrollY] = useState(0);
     const tabsliRef = useRef([]);
     // const [tabs, setTabs] = useState([
     //     {
@@ -54,19 +55,19 @@ const Header = () => {
     //     },
     // ]);
 
+    const handleScroll = () => {
+        setScrollY(window.scrollY);
+    };
+
     useEffect(() => {
-        const handleScroll = () => {
-            setScrollY(window.scrollY);
-
-            if (scrollY > 80) {
-                setIsOn(true);
-            } else {
-                setIsOn(false);
-            }
-        };
-
         // Attach the event listener when the component mounts
         window.addEventListener('scroll', handleScroll);
+
+        if (scrollY > 50) {
+            setIsOn(true);
+        } else {
+            setIsOn(false);
+        }
 
         // Clean up the event listener when the component unmounts
         return () => {
@@ -75,13 +76,14 @@ const Header = () => {
     }, [scrollY, isOn]);
 
     const handleActiveBgEnter = () => {
-        setIsOn(true);
         setIsActiveBg(true);
+        setIsOn(true);
     };
-    // const handleActiveBgLeave = () => {
-    //     setIsOn(true);
-    //     setIsActiveBg(false);
-    // };
+
+    const handleActiveBgLeave = () => {
+        setIsActiveBg(false);
+        setIsOn(false);
+    };
 
     const handleMouseEnter = index => {
         // const navItem = e?.target;
@@ -100,15 +102,20 @@ const Header = () => {
         // deps1UlElLeft = `${leftValue}px`;
         deps1UlElStyle.setProperty('left', `${leftValue}px`);
 
-        setIsActive(index);
         setIsOn(true);
+        setIsActive(index);
 
-        if (scrollY === 0) {
-            setIsOn(true);
-        }
-
-        console.log('***', isOn);
+        // if (scrollY === 0) {
+        //     setIsOn(true);
+        // }
     };
+
+    useEffect(() => {
+        if (isActiveBg) {
+            setIsOn(true);
+            console.log('ison', isOn);
+        }
+    }, [isActiveBg]);
 
     const handleMouseLeave = e => {
         setIsActive(null);
@@ -123,9 +130,10 @@ const Header = () => {
     };
 
     const handleMouseEnterNoIdx = () => {
-        if (scrollY === 0) {
-            setIsOn(true);
-        }
+        // if (scrollY === 0) {
+        //     setIsOn(true);
+        // }
+        setIsOn(true);
     };
 
     const handleMouseLeaveNoIdx = () => {
@@ -138,19 +146,17 @@ const Header = () => {
 
     return (
         <>
-            {/* <header className="on"> */}
-            <header id="header-nav" className={(isOn && scrollY > 0) || isOn ? 'on' : ''}>
+            {/* <header id="header-nav" className={(isOn && scrollY > 0) || isOn ? 'on' : ''}> */}
+            <header id="header-nav" className={isOn ? 'on' : ''}>
                 <div className="logo">
-                    <a href="">
-                        {(isOn && scrollY > 0) || isOn ? (
-                            <img src={logoBlackPC} alt="로고" />
-                        ) : (
-                            <img src={logoWhitePC} alt="로고" />
-                        )}
-                    </a>
+                    <a href="">{isOn ? <img src={logoBlackPC} alt="로고" /> : <img src={logoWhitePC} alt="로고" />}</a>
                 </div>
                 <div className="gnb">
-                    <ul className={isActiveBg ? 'gnb-wrap active-bg' : 'gnb-wrap'} onMouseEnter={handleActiveBgEnter}>
+                    <ul
+                        className={isActiveBg ? 'gnb-wrap active-bg' : 'gnb-wrap'}
+                        onMouseEnter={handleActiveBgEnter}
+                        onMouseLeave={handleActiveBgLeave}
+                    >
                         <li
                             // ! infinite loop 조심
                             // onMouseEnter={handleMouseEnter(0)}
@@ -493,23 +499,6 @@ const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <a href="">기타</a>
-                                        <ul className="gnb-deps2">
-                                            <li>
-                                                <a href="">골프화</a>
-                                            </li>
-                                            <li>
-                                                <a href="">장갑</a>
-                                            </li>
-                                            <li>
-                                                <a href="">벨트</a>
-                                            </li>
-                                            <li>
-                                                <a href="">기타</a>
-                                            </li>
-                                        </ul>
-                                    </li>
                                 </ul>
                             </div>
                         </li>
@@ -548,50 +537,31 @@ const Header = () => {
                 <div className="menu">
                     <ul>
                         <li>
-                            {(isOn && scrollY > 0) || isOn ? (
-                                <img src={btnSearchBlack} alt="검색" />
-                            ) : (
-                                <img src={btnSearch} alt="검색" />
-                            )}
+                            {/* {isOn ? ( */}
+                            {isOn ? <img src={btnSearchBlack} alt="검색" /> : <img src={btnSearch} alt="검색" />}
                             <span>검색</span>
                         </li>
                         <li>
                             <a href="" className="btn-login">
-                                {(isOn && scrollY > 0) || isOn ? (
-                                    <img src={btnLoginBlack} alt="검색" />
-                                ) : (
-                                    <img src={btnLogin} alt="검색" />
-                                )}
+                                {isOn ? <img src={btnLoginBlack} alt="검색" /> : <img src={btnLogin} alt="검색" />}
                                 <span>로그인</span>
                             </a>
                         </li>
                         <li>
                             <a href="" className="btn-mypage">
-                                {(isOn && scrollY > 0) || isOn ? (
-                                    <img src={btnMypageBlack} alt="검색" />
-                                ) : (
-                                    <img src={btnMypage} alt="검색" />
-                                )}
+                                {isOn ? <img src={btnMypageBlack} alt="검색" /> : <img src={btnMypage} alt="검색" />}
                                 <span>마이페이지</span>
                             </a>
                         </li>
                         <li>
                             <a href="" className="btn-cart">
-                                {(isOn && scrollY > 0) || isOn ? (
-                                    <img src={btnCartBlack} alt="검색" />
-                                ) : (
-                                    <img src={btnCart} alt="검색" />
-                                )}
+                                {isOn ? <img src={btnCartBlack} alt="검색" /> : <img src={btnCart} alt="검색" />}
                                 <span>장바구니</span>
                             </a>
                         </li>
                         <li>
                             <a href="" className="btn-service">
-                                {(isOn && scrollY > 0) || isOn ? (
-                                    <img src={btnServiceBlack} alt="검색" />
-                                ) : (
-                                    <img src={btnService} alt="검색" />
-                                )}
+                                {isOn ? <img src={btnServiceBlack} alt="검색" /> : <img src={btnService} alt="검색" />}
                                 <span>고객센터</span>
                             </a>
                         </li>

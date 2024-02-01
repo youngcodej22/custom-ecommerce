@@ -61,3 +61,56 @@ https://webstoryboy.co.kr/1739
 
 ## ref 여러개 묶어서
 https://itprogramming119.tistory.com/entry/React-useRef-%EC%97%AC%EB%9F%AC%EA%B0%9C%EB%A5%BC-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%EB%8B%A4%EB%A3%A8%EA%B8%B0
+
+## promotion 탭 hover 시에 margin때문에 on이 풀려버린다.
+이것을 위해 margin을 padding으로 다시 수정 + borderbox를 content-box로 함으로써 아래 까만 표시줄을 padding포함 안하게
+https://sirius7.tistory.com/6
+
+## window.scrollY, element.scrollTop의 차이, header에 
+header에 마우스 직접은 scrollY를 0부터 1씩 찍어서 문제 없으나
+휠로 하면 100씩하고 나중에 0을 한발 늦게 찍어서 문제. 그래서 다른 방법이 있나 고민
+그러나 함수를 바깥으로 빼는 것으로 해결
+
+```jsx
+// 기존 코드
+useEffect(() => {
+    const handleScroll = () => {
+        setScrollY(window.scrollY);
+
+        if (scrollY > 80) {
+            setIsOn(true);
+        } else {
+            setIsOn(false);
+        }
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, [scrollY, isOn]);
+
+// 해결 코드
+const handleScroll = () => {
+    setScrollY(window.scrollY);
+};
+
+useEffect(() => {
+    // Attach the event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    if (scrollY > 50) {
+        setIsOn(true);
+    } else {
+        setIsOn(false);
+    }
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, [scrollY, isOn]);
+```
