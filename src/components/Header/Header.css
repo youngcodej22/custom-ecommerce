@@ -46,17 +46,17 @@ header#header-nav .gnb .gnb-wrap .gnb-li {
 header#header-nav .gnb .gnb-wrap .gnb-li .gnb-link {
   position: relative;
   display: inline-block;
-  padding: 25.5px 15px;
+  padding: 25.5px 25px;
   font-size: 16px;
   font-weight: 600;
   color: #fff;
   text-align: center;
   line-height: 49px;
-  letter-spacing: 1px;
 }
-@media (min-width: 1700px) {
+@media (max-width: 1700px) {
   header#header-nav .gnb .gnb-wrap .gnb-li .gnb-link {
-    padding: 25.5px 25px;
+    padding: 25.5px 15px;
+    letter-spacing: 1px;
   }
 }
 header#header-nav .gnb .gnb-wrap .gnb-li .gnb-link:hover::after {
@@ -95,7 +95,7 @@ header#header-nav .gnb .gnb-wrap .gnb-li .gnb-deps1 {
   top: 100%;
   left: 0;
   width: 100%;
-  min-height: 250px;
+  min-height: 260px;
   background-color: #fff;
   border-top: 1px solid #f7f7f7;
   transition: all 0.2s ease-in-out;
@@ -138,10 +138,11 @@ header#header-nav .gnb .gnb-wrap .gnb-li .gnb-deps1 ul li .gnb-deps2 {
   padding: 46px 0 0;
 }
 header#header-nav .gnb .gnb-wrap .gnb-li .gnb-deps1 ul li .gnb-deps2 li a {
-  font-weight: 300;
+  font-weight: 400;
 }
 header#header-nav .gnb .gnb-wrap .gnb-li:not(:first-child) .gnb-deps1 > ul {
   display: flex;
+  font-family: "Noto Sans KR", sans-serif;
 }
 header#header-nav .gnb .gnb-wrap .gnb-li:nth-child(2) .gnb-deps1 > ul > li:first-child > a {
   color: #0ad09c;
@@ -152,6 +153,12 @@ header#header-nav .menu {
   top: 50%;
   transform: translate(0%, -75%);
 }
+@media (max-width: 1500px) {
+  header#header-nav .menu {
+    right: 25px;
+    transform: translate(0%, -50%);
+  }
+}
 header#header-nav .menu ul {
   transition: all 0.2s;
 }
@@ -159,6 +166,11 @@ header#header-nav .menu ul li {
   display: inline-block;
   padding: 0 18px;
   position: relative;
+}
+@media (max-width: 1600px) {
+  header#header-nav .menu ul li {
+    padding: 0 14px;
+  }
 }
 @media (min-width: 1700px) {
   header#header-nav .menu ul li {
@@ -183,8 +195,20 @@ header#header-nav .menu ul li span {
   font-size: 14px;
   white-space: nowrap;
 }
+@media (max-width: 1600px) {
+  header#header-nav .menu ul li span {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1500px) {
+  header#header-nav .menu ul li span {
+    display: none;
+  }
+}
 header#header-nav .menu ul li a {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 33px;
   height: 26px;
 }
@@ -196,6 +220,11 @@ header#header-nav .menu ul li a span {
   color: #fff;
   font-size: 14px;
   white-space: nowrap;
+}
+@media (max-width: 1600px) {
+  header#header-nav .menu ul li a span {
+    font-size: 13px;
+  }
 }
 
 .active {

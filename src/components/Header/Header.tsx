@@ -416,7 +416,7 @@ const Header = () => {
                                         <a href="">가방</a>
                                         <ul className="gnb-deps2">
                                             <li>
-                                                <a href="">봂파우치</a>
+                                                <a href="">볼파우치</a>
                                             </li>
                                             <li>
                                                 <a href="">파우치</a>

@@ -109,18 +109,19 @@ header#header-nav {
                     display: inline-block;
                     // margin: 0 15px;
                     // padding: 25.5px 0;
-                    padding: 25.5px 15px;
+                    padding: 25.5px 25px;
                     font-size: 16px;
                     font-weight: 600;
                     color: #fff;
                     text-align: center;
                     line-height: 49px;
-                    letter-spacing: 1px;
+                    // letter-spacing: 1px;
 
-                    @media (min-width: 1700px) {
+                    @media (max-width: 1700px) {
                         // margin: 0 25px;
                         // padding: 25.5px 0;
-                        padding: 25.5px 25px;
+                        padding: 25.5px 15px;    
+                        letter-spacing: 1px;
                     }
 
                     &:hover::after {
@@ -175,7 +176,7 @@ header#header-nav {
                     // transform: translate(-50%, 0);
                     width: 100%;
                     // min-height: 166px;
-                    min-height: 250px;
+                    min-height: 260px;
                     background-color: #fff;
                     // padding: 27px 0 70px;
                     border-top: 1px solid #f7f7f7;
@@ -231,7 +232,7 @@ header#header-nav {
 
                                 li {
                                     a {
-                                        font-weight: 300;
+                                        font-weight: 400;
                                     }
                                 }
                             }
@@ -243,7 +244,7 @@ header#header-nav {
             // * 첫번째 Tab만 제외하고 (brand)
             & .gnb-li:not(:first-child) .gnb-deps1 > ul{
                 display: flex;
-                // font-family: "Nanum Gothic", sans-serif;
+                font-family: 'Noto Sans KR', sans-serif;
             }
 
             & .gnb-li:nth-child(2) .gnb-deps1 > ul > li:first-child > a{
@@ -258,6 +259,11 @@ header#header-nav {
         top: 50%;
         transform: translate(0%, -75%);
 
+        @media (max-width: 1500px) {
+            right: 25px;
+            transform: translate(0%, -50%);
+        }
+
         ul {
             transition: all 0.2s;
 
@@ -268,6 +274,10 @@ header#header-nav {
                 // cursor: pointer;
                 // flex처리
                 position: relative;
+
+                @media (max-width: 1600px) {
+                    padding: 0 14px;
+                }
 
                 @media (min-width: 1700px) {
                     padding: 0 21px;
@@ -294,10 +304,22 @@ header#header-nav {
                     color: #fff;
                     font-size: 14px;
                     white-space: nowrap;
+
+                    @media (max-width: 1600px) {
+                        font-size: 12px;
+                    }
+
+                    @media (max-width: 1500px) {
+                        display: none;
+                    }
                 }
 
                 a {
-                    display: inline-block;
+                    // display: inline-block;
+                    // 가운데정렬
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     width: 33px;
                     height: 26px;
                     // padding: 0 3px;
@@ -313,6 +335,10 @@ header#header-nav {
                         color: #fff;
                         font-size: 14px;
                         white-space: nowrap;
+
+                        @media (max-width: 1600px) {
+                            font-size: 13px;
+                        }
                     }
                 }
 
