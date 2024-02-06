@@ -114,3 +114,17 @@ useEffect(() => {
     };
 }, [scrollY, isOn]);
 ```
+
+## mainContents tab에서 a링크 막기
+a링크 prevent시키는법
+https://gseok.gitbooks.io/react/content/bd80-bd84-bd80-bd84-c9c0-c2dd-b4e4/react-preventdefault-cc98-b9ac-c815-b9ac.html
+
+## mainContents tab 코드 리팩토링 필요
+
+gpt 질문 
+User
+I use react, 
+How to make tab as html, scss with React?
+and how to apply onClick event as Toggle ?
+
+`tab.map()`을 이용할 방법으로 리팩토링
