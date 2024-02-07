@@ -128,3 +128,16 @@ How to make tab as html, scss with React?
 and how to apply onClick event as Toggle ?
 
 `tab.map()`을 이용할 방법으로 리팩토링
+
+## Swiper autoplay 적용
+- [refer](https://codesandbox.io/p/devbox/swiper-react-autoplay-pdrc53?file=%2Fsrc%2FApp.jsx%3A29%2C19-29%2C27)
+
+## git fetch / merge / diff / pull
+- `git pull`:  원격(remote) 저장소의 업데이트를 가져오는 동시에 현재 작업하는 로컬 브랜치로 병합(merge)합니다.
+- `git fetch origin`: 원격 저장소의 업데이트를 확인하고 로컬 저장소에 업데이트된 내용을 다운로드합니다. 하지만 이 내용을 현재 작업 중인 브랜치에 병합하지 않습니다. 따라서 'git fetch' 명령어를 실행한 이후에는 'git merge'나 'git rebase' 명령어를 사용하여 로컬 브랜치에 업데이트를 병합해야 합니다.
+- [설명](https://kotlinworld.com/277)
+
+- diff: fetch로 가져온 코드를 remote코드를 diff로 local코드와 비교하기에는 힘들다.(터미널에서 보여주기 때문에) 그래서 difftool을 이용하여 vscode 파일로 쉽게볼 수 있게 해본다.
+(git diff 다음에 비교할 수 있는 방법은 여러가지가 있다. 예시 `git diff HEAD origin/main`)
+- `git config --global -e` > [difftool "vscode"] cmd = "code --wait --diff $LOCAL $REMOTE" > `git difftool main origin/main` (방법은 여러가지지만 local과 remote를 비교하는 코드다)
+- [difftool 설정](https://velog.io/@jaeyoung9849/Git-diff-vn9bi3g1)

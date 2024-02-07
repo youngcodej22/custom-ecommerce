@@ -912,10 +912,6 @@ a {
 }
 
 /* display purposes */
-body {
-  background-color: #ececec;
-}
-
 .row.grid [class*=col-] {
   min-height: 30px;
   outline: 1px solid #c0c0c0;

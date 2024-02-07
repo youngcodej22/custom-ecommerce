@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+// import { Autoplay } from 'swiper/modules';
 import { EffectFade, Navigation, Pagination, Keyboard } from 'swiper/modules';
 
 // import { LoremPicsum } from 'react-lorem-picsum';
@@ -39,7 +40,12 @@ const MainVisual = () => {
                 pagination={{
                     clickable: true,
                 }}
+                // autoplay={{
+                //     delay: 2500,
+                //     disableOnInteraction: false,
+                // }}
                 keyboard={true}
+                // modules={[EffectFade, Navigation, Pagination, Keyboard, Autoplay]}
                 modules={[EffectFade, Navigation, Pagination, Keyboard]}
                 className="mySwiper"
             >
