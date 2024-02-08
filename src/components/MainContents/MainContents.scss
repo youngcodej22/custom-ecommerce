@@ -257,4 +257,47 @@
             }
         }
     }
+
+    .promotion-cont {
+        display: flex;
+        flex-wrap: wrap;
+        width: 1200px;
+        margin: 0 auto;
+        padding: 90px 0;
+
+        .box {
+            width: 33.33%;
+
+            a {
+                display: flex;
+                align-items: center;
+                // 공통 a
+                color: #242424;
+                text-decoration: none;
+
+                .icon {
+                    padding-right: 21px;
+
+                    img {
+                        // 공통
+                        border: 0 none;
+                        vertical-align: top;
+                    }
+                }
+
+                .text-wrap {
+
+                    .title {
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+
+                    .text {
+                        font-size: 16px;
+                        padding-top: 6px;
+                    }
+                }
+            }
+        }
+    }
 }

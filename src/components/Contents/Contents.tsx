@@ -1,6 +1,7 @@
 import React from 'react';
 import MainVisual from '../MainVisual/MainVisual';
 import MainContents from '../MainContents/MainContents';
+import MainMdPick from '../MainMdPick/MainMdPick';
 
 import './Contents.scss';
 
@@ -10,6 +11,7 @@ const Contents = () => {
         <div className="main-content">
             <MainVisual />
             <MainContents />
+            <MainMdPick />
         </div>
     );
 };

@@ -9,3 +9,5 @@
 
 - [ ] 인스타그램 api 사용 해보기
 - [ ] goods에 찜리스트 addCartLayer wishlayer 따로 component 처리
+
+- [ ] item-cont 부분 컴포넌트로 뺴서 관리

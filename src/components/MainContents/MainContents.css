@@ -185,4 +185,35 @@
 .main-contents .main-goods .goods-list .goods-list-content .goods-tab .goods-tab-content .goods-tab-box ul li .item-cont .item-info-cont .item-icon-box img {
   display: inline-block;
   padding: 5px 3px 0 0;
+}
+.main-contents .promotion-cont {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 90px 0;
+}
+.main-contents .promotion-cont .box {
+  width: 33.33%;
+}
+.main-contents .promotion-cont .box a {
+  display: flex;
+  align-items: center;
+  color: #242424;
+  text-decoration: none;
+}
+.main-contents .promotion-cont .box a .icon {
+  padding-right: 21px;
+}
+.main-contents .promotion-cont .box a .icon img {
+  border: 0 none;
+  vertical-align: top;
+}
+.main-contents .promotion-cont .box a .text-wrap .title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.main-contents .promotion-cont .box a .text-wrap .text {
+  font-size: 16px;
+  padding-top: 6px;
 }/*# sourceMappingURL=MainContents.css.map */

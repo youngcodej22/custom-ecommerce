@@ -141,3 +141,6 @@ and how to apply onClick event as Toggle ?
 (git diff 다음에 비교할 수 있는 방법은 여러가지가 있다. 예시 `git diff HEAD origin/main`)
 - `git config --global -e` > [difftool "vscode"] cmd = "code --wait --diff $LOCAL $REMOTE" > `git difftool main origin/main` (방법은 여러가지지만 local과 remote를 비교하는 코드다)
 - [difftool 설정](https://velog.io/@jaeyoung9849/Git-diff-vn9bi3g1)
+
+## Swiper에서 default DIV 태그를 교체
+- [swiper props에서 참고](https://swiperjs.com/react)

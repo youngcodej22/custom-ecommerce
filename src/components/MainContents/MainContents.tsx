@@ -43,6 +43,11 @@ import labelNew from '/assets/label/label-new.png';
 import labelSale from '/assets/label/label-sale.png';
 import labelWomen from '/assets/label/label-women.png';
 
+// Promotion
+import promotionMembership from '/assets/promotion/promotion-membership.png';
+import promotionKakao from '/assets/promotion/promotion-kakao.png';
+import promotionReview from '/assets/promotion/promotion-review.png';
+
 import './MainContents.scss';
 
 const MainContents = () => {
@@ -726,7 +731,41 @@ const MainContents = () => {
             </div>
             {/* 숨겨진거 나중에 처리 */}
             {/* <div className="slide-c"></div> */}
-            <div className="main-promotion"></div>
+            <div className="promotion-cont">
+                <div className="box">
+                    <a href="">
+                        <div className="icon">
+                            <img src={promotionMembership} alt="프로모션 멤버쉽" />
+                        </div>
+                        <div className="text-wrap">
+                            <p className="title">MEMBERSHIP</p>
+                            <p className="text">맥케이슨 회원 혜택 안내</p>
+                        </div>
+                    </a>
+                </div>
+                <div className="box">
+                    <a href="">
+                        <div className="icon">
+                            <img src={promotionReview} alt="프로모션 리뷰" />
+                        </div>
+                        <div className="text-wrap">
+                            <p className="title">REVIEW</p>
+                            <p className="text">상품 리뷰 작성 시 마일리지 적립</p>
+                        </div>
+                    </a>
+                </div>
+                <div className="box">
+                    <a href="">
+                        <div className="icon">
+                            <img src={promotionKakao} alt="프로모션 카카오톡" />
+                        </div>
+                        <div className="text-wrap">
+                            <p className="title">KAKAOTALK</p>
+                            <p className="text">플러스친구 등록 시 쿠폰 증정</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     );
 };
