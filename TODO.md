@@ -11,3 +11,9 @@
 - [ ] goods에 찜리스트 addCartLayer wishlayer 따로 component 처리
 
 - [ ] item-cont 부분 컴포넌트로 뺴서 관리
+
+- [ ] branch develop 만들어서 사용하기
+
+- [ ]https://reactrouter.com/en/main/start/tutorial 
+https://github.com/remix-run/react-router
+- [ ] react-router-dom 사용, layout 분리 및 page 나누기
