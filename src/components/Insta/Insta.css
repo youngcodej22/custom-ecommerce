@@ -1,0 +1,29 @@
+.insta-cont {
+  margin-top: 150px;
+  margin-bottom: 175px;
+}
+.insta-cont .en {
+  font-family: "Montserrat", sans-serif;
+}
+.insta-cont h2 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+}
+.insta-cont h2 p {
+  color: #666666;
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 6px;
+}
+.insta-cont h2 p a {
+  color: inherit;
+}
+.insta-cont .insta-box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 80px 0px;
+}
+.insta-cont .insta-box img:not(:first-child) {
+  margin-left: 5px;
+}/*# sourceMappingURL=Insta.css.map */

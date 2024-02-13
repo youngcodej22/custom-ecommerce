@@ -2,6 +2,8 @@ import React from 'react';
 import MainVisual from '../MainVisual/MainVisual';
 import MainContents from '../MainContents/MainContents';
 import MainMdPick from '../MainMdPick/MainMdPick';
+import SideBanner from '../SideBanner/SideBanner';
+import Insta from '../Insta/Insta';
 
 import './Contents.scss';
 
@@ -12,6 +14,8 @@ const Contents = () => {
             <MainVisual />
             <MainContents />
             <MainMdPick />
+            <SideBanner />
+            <Insta />
         </div>
     );
 };

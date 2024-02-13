@@ -1,0 +1,38 @@
+.insta-cont {
+    // padding-top: 150px;
+    margin-top: 150px;
+    margin-bottom: 175px;
+
+    .en {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+        font-weight: 700;
+
+        p {
+            color: #666666;
+            font-size: 20px;
+            font-weight: 500;
+            padding-top: 6px;
+
+            a {
+                color: inherit;
+            }
+        }
+    }
+
+    .insta-box {
+        width: 100%;
+        box-sizing: border-box;
+        // padding: 40px 80px 175px;
+        padding: 40px 80px 0px;
+
+        // LoremPicsum
+        img:not(:first-child) {
+            margin-left: 5px;
+        }
+    }
+}
