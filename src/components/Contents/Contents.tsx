@@ -4,7 +4,7 @@ import React from 'react';
 // import MainMdPick from '../MainMdPick/MainMdPick';
 // import SideBanner from '../SideBanner/SideBanner';
 // import Insta from '../Insta/Insta';
-import Home from '../../pages/Home/Home';
+// import Home from '../../pages/Home/Home';
 
 import './Contents.scss';
 
@@ -17,7 +17,7 @@ const Contents = () => {
             <MainMdPick />
             <SideBanner />
             <Insta /> */}
-            <Home />
+            {/* <Home /> */}
         </div>
     );
 };

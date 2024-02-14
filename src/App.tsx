@@ -6,22 +6,33 @@ import Header from './components/Header/Header';
 import Contents from './components/Contents/Contents';
 import Footer from './components/Footer/Footer';
 
+import Layout from './Layout/Layout';
 import Home from './pages/Home/Home';
 import ProductList from './pages/ProductList/ProductList';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 
+// let router = createBrowserRouter([
 const router = createBrowserRouter([
     {
         path: '/',
         // exact: true,
-        element: <Home />,
+        element: <Layout />,
         errorElement: <ErrorPage />,
+        children: [
+            {
+                index: true,
+                path: '/',
+                element: <Home />,
+                // loader: homeLoader,
+            },
+            {
+                path: '/products',
+                element: <ProductList />,
+                // exact: true,
+            },
+        ],
     },
-    {
-        path: '/products',
-        // exact: true,
-        element: <ProductList />,
-    },
+
     // {
     //     path: '/main/:id',
     //     element: Contents,
@@ -29,17 +40,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-    return (
-        <>
-            <RouterProvider router={router}>
-                <div className="container">
-                    <Header />
-                    <Contents />
-                    <Footer />
-                </div>
-            </RouterProvider>
-        </>
-    );
+    return <RouterProvider router={router} />;
 }
 
 export default App;

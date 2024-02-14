@@ -144,3 +144,25 @@ and how to apply onClick event as Toggle ?
 
 ## Swiper에서 default DIV 태그를 교체
 - [swiper props에서 참고](https://swiperjs.com/react)
+
+## useEffect 오류
+useEffect안에 useState에 초기 렌더링에 안바뀐다.
+location으 pathname으로 처리하려는데 왜 안되 클래스
+https://velog.io/@yhnb3/%EC%A3%BC%EB%8B%88%EC%96%B4-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%93%A4%EC%9D%B4-useEffect%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%A0%EB%95%8C-%EC%9E%90%EC%A3%BC-%ED%95%98%EB%8A%94-%EC%8B%A4%EC%88%98-1%ED%8E%B8
+
+https://codingapple.com/unit/react-setstate-async-problems/
+
+https://1yoouoo.tistory.com/16
+
+https://velog.io/@khy226/useEffect-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C-%EC%9A%94%EC%95%BD
+
+
+# router
+https://github.com/remix-run/react-router/blob/main/examples/data-router/src/app.tsx
+
+https://www.youtube.com/watch?v=XBRLVRjZ3CQ
+https://www.youtube.com/watch?v=rkDSVHomVoQ
+https://www.youtube.com/watch?v=d5kJDe1Y6ZU&list=PLynWqC6VC9KNJIAsMJMjmyNezoEnmjSfH
+https://www.youtube.com/watch?v=5s57C7leXc4&list=PL4cUxeGkcC9iVKmtNuCeIswnQ97in2GGf&index=3
+https://www.youtube.com/watch?v=nDGA3km5He4
+https://www.youtube.com/watch?v=eFPvXGZETiY

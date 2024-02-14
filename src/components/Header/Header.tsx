@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import logoBlackPC from '/assets/logo/logo_black_pc.png';
 import logoWhitePC from '/assets/logo/logo_white_pc.png';
 import btnClose from '/assets/icon/icon-close.png';
@@ -16,7 +17,9 @@ import btnService from '/assets/icon/icon-service.png';
 import './Header.scss';
 
 const Header = () => {
-    const [isOn, setIsOn] = useState(false);
+    const location = useLocation();
+    // const [isOn, setIsOn] = useState(false);
+    const [isOn, setIsOn] = useState(location.pathname !== '/');
     const [isActiveBg, setIsActiveBg] = useState(false);
     const [isActive, setIsActive] = useState(null);
     const [scrollY, setScrollY] = useState(window.scrollY);
@@ -58,6 +61,20 @@ const Header = () => {
     const handleScroll = () => {
         setScrollY(window.scrollY);
     };
+
+    useEffect(() => {
+        console.log('11', location.pathname);
+        // location.pathname !== '/' ? console.log('Yes') : console.log('No');
+        // location.pathname !== '/' ? setIsOn(prevIsOn => true) : setIsOn(false);
+
+        if (location.pathname !== '/') {
+            setIsOn(true);
+        } else {
+            setIsOn(false);
+        }
+
+        console.log('**', isOn);
+    }, []);
 
     useEffect(() => {
         // Attach the event listener when the component mounts
@@ -113,7 +130,6 @@ const Header = () => {
     useEffect(() => {
         if (isActiveBg) {
             setIsOn(true);
-            console.log('ison', isOn);
         }
     }, [isActiveBg]);
 

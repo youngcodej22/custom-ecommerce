@@ -1,4 +1,3 @@
-import React from 'react';
 import MainVisual from '../../components/MainVisual/MainVisual';
 import MainContents from '../../components/MainContents/MainContents';
 import MainMdPick from '../../components/MainMdPick/MainMdPick';
