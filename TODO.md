@@ -18,3 +18,5 @@
 https://github.com/remix-run/react-router
 - [ ] react-router-dom 사용, layout 분리 및 page 나누기
 - [ ] example 가서 data-router 참고
+
+- [ ] Insta 컴포넌트 display Grid 적용?

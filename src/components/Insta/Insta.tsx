@@ -15,12 +15,12 @@ const Insta = () => {
                 </p>
             </h2>
             <div className="insta-box">
-                <LoremPicsum width={282} height={282} random />
-                <LoremPicsum width={282} height={282} random />
-                <LoremPicsum width={282} height={282} random />
-                <LoremPicsum width={282} height={282} random />
-                <LoremPicsum width={282} height={282} random />
-                <LoremPicsum width={282} height={282} random />
+                <LoremPicsum width={1080} height={1080} random />
+                <LoremPicsum width={1080} height={1080} random />
+                <LoremPicsum width={1080} height={1080} random />
+                <LoremPicsum width={1080} height={1080} random />
+                <LoremPicsum width={1080} height={1080} random />
+                <LoremPicsum width={1080} height={1080} random />
             </div>
         </div>
     );

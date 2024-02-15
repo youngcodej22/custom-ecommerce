@@ -18,8 +18,8 @@ import './Header.scss';
 
 const Header = () => {
     const location = useLocation();
-    // const [isOn, setIsOn] = useState(false);
-    const [isOn, setIsOn] = useState(location.pathname !== '/');
+    // const [isOn, setIsOn] = useState(location.pathname !== '/');
+    const [isOn, setIsOn] = useState(false);
     const [isActiveBg, setIsActiveBg] = useState(false);
     const [isActive, setIsActive] = useState(null);
     const [scrollY, setScrollY] = useState(window.scrollY);
@@ -63,18 +63,20 @@ const Header = () => {
     };
 
     useEffect(() => {
-        console.log('11', location.pathname);
+        console.log('out path', location.pathname);
         // location.pathname !== '/' ? console.log('Yes') : console.log('No');
         // location.pathname !== '/' ? setIsOn(prevIsOn => true) : setIsOn(false);
 
         if (location.pathname !== '/') {
+            console.log('path', location.pathname);
             setIsOn(true);
+            console.log('is.on', isOn);
         } else {
             setIsOn(false);
         }
 
         console.log('**', isOn);
-    }, []);
+    }, [location]);
 
     useEffect(() => {
         // Attach the event listener when the component mounts

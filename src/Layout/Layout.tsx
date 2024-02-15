@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
@@ -8,23 +8,20 @@ import { Outlet } from 'react-router-dom';
 import './Layout.scss';
 
 const Layout: React.FC = ({ children }) => {
+    const [isPaddingTop, setIsPaddingTop] = useState(false);
     const location = useLocation();
-    const [isPaddingTop, setIsPaddingTop] = React.useState(false);
     // let navigation = useNavigation();
     // let revalidator = useRevalidator();
     // let fetchers = useFetchers();
     // let fetcherInProgress = fetchers.some(f => ['loading', 'submitting'].includes(f.state));
 
     useEffect(() => {
-        // console.log('22', location.pathname);
-
         if (location.pathname !== '/') {
             setIsPaddingTop(true);
+        } else {
+            setIsPaddingTop(false);
         }
-        // else {
-        //     setIsPaddingTop(false);
-        // }
-    }, [location.pathname]);
+    }, [location]);
 
     return (
         <>
