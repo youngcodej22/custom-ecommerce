@@ -16,14 +16,22 @@ import btnService from '/assets/icon/icon-service.png';
 
 import './Header.scss';
 
-const Header = () => {
+// const Header: React.FC<{ isOn: boolean, setIsOn: React.Dispatch<React.SetStateAction<boolean>> }> = ({
+//     isOn,
+//     setIsOn,
+// }) => {
+const Header: React.FC = () => {
     const location = useLocation();
-    // const [isOn, setIsOn] = useState(location.pathname !== '/');
+    // console.log('Header:', isOn);
+    // console.log('Header:', setIsOn);
     const [isOn, setIsOn] = useState(false);
     const [isActiveBg, setIsActiveBg] = useState(false);
     const [isActive, setIsActive] = useState(null);
     const [scrollY, setScrollY] = useState(window.scrollY);
     // const [scrollY, setScrollY] = useState(0);
+
+    console.log('0', isOn);
+
     const tabsliRef = useRef([]);
     // const [tabs, setTabs] = useState([
     //     {
@@ -67,20 +75,25 @@ const Header = () => {
         // location.pathname !== '/' ? console.log('Yes') : console.log('No');
         // location.pathname !== '/' ? setIsOn(prevIsOn => true) : setIsOn(false);
 
-        if (location.pathname !== '/') {
-            console.log('path', location.pathname);
+        if (location.pathname === '/products') {
+            console.log('inner path', location.pathname);
             setIsOn(true);
-            console.log('is.on', isOn);
+            // setIsOn(location.pathname === '/products');
+            console.log('1', isOn);
         } else {
             setIsOn(false);
         }
 
-        console.log('**', isOn);
-    }, [location]);
+        console.log('2', isOn);
+    }, [location.pathname]);
+
+    console.log('3', isOn);
 
     useEffect(() => {
         // Attach the event listener when the component mounts
         window.addEventListener('scroll', handleScroll);
+
+        if (location.pathname !== '/') return;
 
         if (scrollY > 50) {
             setIsOn(true);
@@ -95,16 +108,21 @@ const Header = () => {
     }, [scrollY, isOn]);
 
     const handleActiveBgEnter = () => {
+        if (location.pathname !== '/') return;
+
         setIsActiveBg(true);
         setIsOn(true);
     };
 
     const handleActiveBgLeave = () => {
+        if (location.pathname !== '/') return;
+
         setIsActiveBg(false);
         setIsOn(false);
     };
 
     const handleMouseEnter = index => {
+        if (location.pathname !== '/') return;
         // const navItem = e?.target;
         // const boundingBox = navItem.getBoundingClientRect();
         // const offsetLeft = boundingBox.left;
@@ -130,12 +148,14 @@ const Header = () => {
     };
 
     useEffect(() => {
+        if (location.pathname !== '/') return;
         if (isActiveBg) {
             setIsOn(true);
         }
     }, [isActiveBg]);
 
     const handleMouseLeave = e => {
+        if (location.pathname !== '/') return;
         setIsActive(null);
 
         // if (scrollY > 0 && isOn) {
@@ -148,6 +168,7 @@ const Header = () => {
     };
 
     const handleMouseEnterNoIdx = () => {
+        if (location.pathname !== '/') return;
         // if (scrollY === 0) {
         //     setIsOn(true);
         // }
@@ -155,6 +176,7 @@ const Header = () => {
     };
 
     const handleMouseLeaveNoIdx = () => {
+        if (location.pathname !== '/') return;
         if (scrollY > 0) {
             setIsOn(true);
         } else {

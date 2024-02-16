@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './styles/components/style.css';
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
     {
         path: '/',
         // exact: true,
+        // element: <Layout isOn={isOn} setIsOn={setIsOn} />,
         element: <Layout />,
         errorElement: <ErrorPage />,
         children: [
@@ -26,6 +28,7 @@ const router = createBrowserRouter([
                 // loader: homeLoader,
             },
             {
+                index: true,
                 path: '/products',
                 element: <ProductList />,
                 // exact: true,
@@ -40,7 +43,12 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-    return <RouterProvider router={router} />;
+    return (
+        // <RouterProvider router={router}>
+        //     <Layout isOn={isOn} setIsOn={setIsOn} />
+        // </RouterProvider>
+        <RouterProvider router={router} />
+    );
 }
 
 export default App;

@@ -166,3 +166,13 @@ https://www.youtube.com/watch?v=d5kJDe1Y6ZU&list=PLynWqC6VC9KNJIAsMJMjmyNezoEnmj
 https://www.youtube.com/watch?v=5s57C7leXc4&list=PL4cUxeGkcC9iVKmtNuCeIswnQ97in2GGf&index=3
 https://www.youtube.com/watch?v=nDGA3km5He4
 https://www.youtube.com/watch?v=eFPvXGZETiY
+
+## App, Layout, Header - useEffect 오류
+**중요**
+
+원인: Header에 isOn state 가 '/'를 제외하고는 모두 고정되어 on이 되어야한다. '/products' 및 모든 경우, 그런데 기존에 '/' 때문에 Header 컴포넌트에 `setIsOn`관련 해서 mouseLeave 라든지 하는 것에 너무 많이 변경을 둬서 문제가 생김. 
+그리고 scrollY 부분에서 `else{ setIsOn(false) }`가 한번 더 있어서 계속 렌더링이 false가 되는 문제가 생겼었다.
+
+해결: 첫번째 useEffect안에 else를 지우고, 두번째로 mouseLeave 같은 것들은 '/' root에서만 가능하게 코드를 변경하자 (`handleActiveBgEnter`, `handleActiveBgLeave` 등)
+
+궁금: 결국 Header에 있던 `const [isOn, ...]` 코드를 App, Layout에서 prop으로 Header 전달했던 것들도 가능하지만 다시 해보니 Header 그냥 둬도 된다. 다만 useEffect에서 setState이후 false가 찍히고 useEffect 밖에서 다시 찍어보니 true가 나와서 결국 Header에서 state를 해결해도 되는데,,, false가 찍히는 이유가 무엇인가 알아보자!!!

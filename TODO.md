@@ -20,3 +20,6 @@ https://github.com/remix-run/react-router
 - [ ] example 가서 data-router 참고
 
 - [ ] Insta 컴포넌트 display Grid 적용?
+
+- [ ] Header에 `if (location.pathname).. return` 코드 어떻게 리팩토링하지??? 
+- [ ] Header > useEffect 다음에 왜 setIsOn(true) 인데 false가 나오지?
