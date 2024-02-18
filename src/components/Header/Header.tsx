@@ -22,8 +22,6 @@ import './Header.scss';
 // }) => {
 const Header: React.FC = () => {
     const location = useLocation();
-    // console.log('Header:', isOn);
-    // console.log('Header:', setIsOn);
     const [isOn, setIsOn] = useState(false);
     const [isActiveBg, setIsActiveBg] = useState(false);
     const [isActive, setIsActive] = useState(null);
@@ -71,14 +69,12 @@ const Header: React.FC = () => {
     };
 
     useEffect(() => {
-        console.log('out path', location.pathname);
         // location.pathname !== '/' ? console.log('Yes') : console.log('No');
         // location.pathname !== '/' ? setIsOn(prevIsOn => true) : setIsOn(false);
 
-        if (location.pathname === '/products') {
-            console.log('inner path', location.pathname);
+        if (location.pathname !== '/') {
             setIsOn(true);
-            // setIsOn(location.pathname === '/products');
+            // setIsOn(location.pathname === '/productlist');
             console.log('1', isOn);
         } else {
             setIsOn(false);
