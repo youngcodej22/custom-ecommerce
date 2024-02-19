@@ -1,5 +1,19 @@
 import React from 'react';
 import iconFilter from '/assets/icon/icon-filter.png';
+import iconFilterSet from '/assets/icon/icon-filter-set.png';
+import iconNext from '/assets/icon/icon-pagination-next.png';
+import iconLast from '/assets/icon/icon-pagination-last.png';
+
+import iconBasket from '/assets/icon/icon-basket.png';
+import iconBasketGet from '/assets/icon/icon-basket-get.png';
+
+import labelMen from '/assets/label/label-men.png';
+import labelMile from '/assets/label/label-mile.png';
+import labelNew from '/assets/label/label-new.png';
+import labelSale from '/assets/label/label-sale.png';
+import labelWomen from '/assets/label/label-women.png';
+
+import './ProductList.scss';
 
 const ProductList = () => {
     return (
@@ -51,16 +65,13 @@ const ProductList = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="good_list_item_tit">
+                    <div className="goods_list_item_tit">
                         <h2>WOMEN</h2>
                     </div>
                     <div className="list_top_box">
                         <div className="list_info_box">
                             <a href="javascript:void(0)" className="filter_open_btn on">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/goods/filter_icon.png"
-                                    alt="필터"
-                                />
+                                <img src={iconFilterSet} alt="필터" />
                                 <span>필터 닫기</span>
                             </a>
                             <span>314개의 상품</span>
@@ -604,7 +615,9 @@ const ProductList = () => {
                                                             className="check-s"
                                                             title="FFFFFF"
                                                         >
-                                                            <div className="bg"></div>
+                                                            <div className="bg">
+                                                                <span></span>
+                                                            </div>
                                                             <p>화이트</p>
                                                         </label>
                                                     </li>
@@ -706,7 +719,48 @@ const ProductList = () => {
                                         <dl className="price_range_wrap">
                                             <dt className="option_toggle_btn">가격</dt>
                                             <dd>
-                                                <div id="rangeSlider"></div>
+                                                <div id="rangeSlider">
+                                                    <div className="noUi-base">
+                                                        <div className="noUi-connects">
+                                                            <div className="noUi-connect"></div>
+                                                        </div>
+                                                        <div className="noUi-origin">
+                                                            <div
+                                                                className="noUi-handle noUi-handle-lower"
+                                                                data-handle="0"
+                                                                role="slider"
+                                                                aria-orientation="horizontal"
+                                                                aria-valuemin="0.0"
+                                                                aria-valuemax="2000000.0"
+                                                                aria-valuenow="0.0"
+                                                                aria-valuetext="0.00"
+                                                            >
+                                                                <div className="noUi-touch-area"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            className="noUi-origin"
+                                                            style={{
+                                                                transform: 'translate(0%, 0px)',
+                                                                zIndex: 4,
+                                                            }}
+                                                        >
+                                                            <div
+                                                                className="noUi-handle noUi-handle-upper"
+                                                                data-handle="1"
+                                                                tabindex="0"
+                                                                role="slider"
+                                                                aria-orientation="horizontal"
+                                                                aria-valuemin="0.0"
+                                                                aria-valuemax="2000000.0"
+                                                                aria-valuenow="2000000.0"
+                                                                aria-valuetext="2000000.00"
+                                                            >
+                                                                <div className="noUi-touch-area"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div className="price_box">
                                                     <input type="text" value="0" />
                                                     <span>~</span>
@@ -737,19 +791,13 @@ const ProductList = () => {
                                                                     type="button"
                                                                     className="btn_basket_get btn_add_wish"
                                                                 >
-                                                                    <img
-                                                                        src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/icon/goods_icon/icon_basket_cart.png"
-                                                                        alt="찜하기"
-                                                                    />
+                                                                    <img src={iconBasketGet} alt="찜하기" />
                                                                 </button>
                                                                 <button
                                                                     type="button"
                                                                     className="btn_basket_cart btn_add_cart_ btn_open_layer"
                                                                 >
-                                                                    <img
-                                                                        src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/icon/goods_icon/icon_basket_cart.png"
-                                                                        alt="장바구니"
-                                                                    />
+                                                                    <img src={iconBasket} alt="장바구니" />
                                                                 </button>
                                                             </div>
                                                         </a>
@@ -773,21 +821,9 @@ const ProductList = () => {
                                                             </div>
                                                         </div>
                                                         <div className="item_icon_box">
-                                                            <img
-                                                                src="https://mckayson.cdn-nhncommerce.com/data/icon/goods_icon/4.png"
-                                                                alt="여성용"
-                                                                className="middle"
-                                                            />{' '}
-                                                            <img
-                                                                src="https://mckayson.cdn-nhncommerce.com/data/icon/goods_icon/2.png"
-                                                                alt="두배적립"
-                                                                className="middle"
-                                                            />{' '}
-                                                            <img
-                                                                src="https://mckayson.cdn-nhncommerce.com/data/icon/goods_icon/1.png"
-                                                                alt="신상품"
-                                                                className="middle"
-                                                            />
+                                                            <img src={labelWomen} alt="여성용" className="middle" />{' '}
+                                                            <img src={labelMile} alt="두배적립" className="middle" />{' '}
+                                                            <img src={labelNew} alt="신상품" className="middle" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -799,7 +835,37 @@ const ProductList = () => {
                         </div>
                     </div>
 
-                    <div className="pagination"></div>
+                    <div className="pagination">
+                        <ul>
+                            <li>
+                                <a href="#">1</a>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                            </li>
+                            <li>
+                                <a href="#">5</a>
+                            </li>
+                            <li className="btn_page btn_page_next">
+                                <a href="#">
+                                    <img src={iconNext} alt="" />
+                                    다음
+                                </a>
+                            </li>
+                            <li className="btn_page btn_page_last">
+                                <a href="#">
+                                    <img src={iconLast} alt="" />
+                                    다음
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
