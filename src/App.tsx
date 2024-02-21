@@ -8,9 +8,10 @@ import Contents from './components/Contents/Contents';
 import Footer from './components/Footer/Footer';
 
 import Layout from './Layout/Layout';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
 import Home from './pages/Home/Home';
 import ProductList from './pages/ProductList/ProductList';
-import ErrorPage from './pages/ErrorPage/ErrorPage';
+import ProductDetail from './pages/ProductDetail/ProductDetail';
 
 // let router = createBrowserRouter([
 const router = createBrowserRouter([
@@ -31,6 +32,12 @@ const router = createBrowserRouter([
                 index: true,
                 path: '/productlist',
                 element: <ProductList />,
+                // exact: true,
+            },
+            {
+                index: true,
+                path: '/productdetail',
+                element: <ProductDetail />,
                 // exact: true,
             },
         ],

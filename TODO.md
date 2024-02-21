@@ -23,3 +23,5 @@ https://github.com/remix-run/react-router
 
 - [ ] Header에 `if (location.pathname).. return` 코드 어떻게 리팩토링하지??? 
 - [ ] Header > useEffect 다음에 왜 setIsOn(true) 인데 false가 나오지?
+
+- [ ] item-cont>item-photo-box 컴포넌트화 하기

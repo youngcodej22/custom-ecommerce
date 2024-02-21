@@ -176,3 +176,6 @@ https://www.youtube.com/watch?v=eFPvXGZETiY
 해결: 첫번째 useEffect안에 else를 지우고, 두번째로 mouseLeave 같은 것들은 '/' root에서만 가능하게 코드를 변경하자 (`handleActiveBgEnter`, `handleActiveBgLeave` 등)
 
 궁금: 결국 Header에 있던 `const [isOn, ...]` 코드를 App, Layout에서 prop으로 Header 전달했던 것들도 가능하지만 다시 해보니 Header 그냥 둬도 된다. 다만 useEffect에서 setState이후 false가 찍히고 useEffect 밖에서 다시 찍어보니 true가 나와서 결국 Header에서 state를 해결해도 되는데,,, false가 찍히는 이유가 무엇인가 알아보자!!!
+
+## reset 문제
+https://velog.io/@teo/2022-CSS-Reset-%EB%8B%A4%EC%8B%9C-%EC%8D%A8%EB%B3%B4%EA%B8%B0

@@ -185,7 +185,7 @@ const Header: React.FC = () => {
             {/* <header id="header-nav" className={(isOn && scrollY > 0) || isOn ? 'on' : ''}> */}
             <header id="header-nav" className={isOn ? 'on' : ''}>
                 <div className="logo">
-                    <a href="">{isOn ? <img src={logoBlackPC} alt="로고" /> : <img src={logoWhitePC} alt="로고" />}</a>
+                    <a href="/">{isOn ? <img src={logoBlackPC} alt="로고" /> : <img src={logoWhitePC} alt="로고" />}</a>
                 </div>
                 <div className="gnb">
                     <ul
@@ -203,7 +203,7 @@ const Header: React.FC = () => {
                             onMouseLeave={handleMouseLeave}
                             ref={el => (tabsliRef.current[0] = el)}
                         >
-                            <a className="gnb-link" href="">
+                            <a className="gnb-link" href="/brand">
                                 BRAND
                             </a>
                             {/* <div className="gnb-deps1"> */}
@@ -230,7 +230,7 @@ const Header: React.FC = () => {
                             onMouseLeave={handleMouseLeave}
                             ref={el => (tabsliRef.current[1] = el)}
                         >
-                            <a className="gnb-link" href="">
+                            <a className="gnb-link" href="/productlist">
                                 NEW
                             </a>
                             <div className={isActive === 1 ? 'gnb-deps1 active' : 'gnb-deps1'}>
@@ -300,7 +300,7 @@ const Header: React.FC = () => {
                             onMouseLeave={handleMouseLeave}
                             ref={el => (tabsliRef.current[2] = el)}
                         >
-                            <a className="gnb-link" href="">
+                            <a className="gnb-link" href="/productlist">
                                 WOMEN
                             </a>
                             <div className={isActive === 2 ? 'gnb-deps1 active' : 'gnb-deps1'}>
