@@ -134,3 +134,15 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+// 추가
+// body,th,td,input,select,textarea,button {font-size:16px;line-height:1.5;font-family:Montserrat, Pretendard, Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움",sans-serif;color:#242424} 
+dl,ul,ol,li {list-style:none}
+fieldset,img {border:0 none;vertical-align:top;}
+input,select,textarea,button {vertical-align:middle}
+button {border:0 none;background-color:transparent;cursor:pointer}
+input:read-only {background:#f9f9f9; cursor: default;}
+a {color:#242424;text-decoration:none}
+a:active, a:hover {text-decoration:none;}
+th {font-weight: 500; font-size: 16px;}
+td {font-size: 16px;}
