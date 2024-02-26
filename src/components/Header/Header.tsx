@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logoBlackPC from '/assets/logo/logo_black_pc.png';
 import logoWhitePC from '/assets/logo/logo_white_pc.png';
 import btnClose from '/assets/icon/icon-close.png';
@@ -104,21 +104,30 @@ const Header: React.FC = () => {
     }, [scrollY, isOn]);
 
     const handleActiveBgEnter = () => {
-        if (location.pathname !== '/') return;
-
-        setIsActiveBg(true);
-        setIsOn(true);
+        if (location.pathname !== '/') {
+            setIsActiveBg(true);
+        } else {
+            setIsActiveBg(true);
+            setIsOn(true);
+        }
     };
 
     const handleActiveBgLeave = () => {
-        if (location.pathname !== '/') return;
+        // if (location.pathname !== '/') return;
+        // setIsActiveBg(false);
+        // setIsOn(false);
 
-        setIsActiveBg(false);
-        setIsOn(false);
+        if (location.pathname !== '/') {
+            setIsActiveBg(false);
+        } else {
+            setIsActiveBg(false);
+            setIsOn(false);
+        }
     };
 
     const handleMouseEnter = index => {
-        if (location.pathname !== '/') return;
+        // if (location.pathname !== '/') return;
+
         // const navItem = e?.target;
         // const boundingBox = navItem.getBoundingClientRect();
         // const offsetLeft = boundingBox.left;
@@ -137,34 +146,37 @@ const Header: React.FC = () => {
 
         setIsOn(true);
         setIsActive(index);
-
-        // if (scrollY === 0) {
-        //     setIsOn(true);
-        // }
     };
 
     useEffect(() => {
-        if (location.pathname !== '/') return;
+        // if (location.pathname !== '/') return;
         if (isActiveBg) {
             setIsOn(true);
         }
     }, [isActiveBg]);
 
     const handleMouseLeave = e => {
-        if (location.pathname !== '/') return;
-        setIsActive(null);
+        // // if (location.pathname !== '/') return;
+        // setIsActive(null);
 
-        // if (scrollY > 0 && isOn) {
-        if (scrollY > 0) {
+        // // if (scrollY > 0 && isOn) {
+        // if (scrollY > 0) {
+        //     setIsOn(true);
+        // } else {
+        //     setIsOn(false);
+        // }
+
+        if (location.pathname !== '/') {
+            setIsActive(null);
             setIsOn(true);
         } else {
-            setIsOn(false);
+            setIsActive(null);
+            scrollY > 0 ? setIsOn(true) : setIsOn(false);
         }
-        // e.target.style.left = 'auto';
     };
 
     const handleMouseEnterNoIdx = () => {
-        if (location.pathname !== '/') return;
+        // if (location.pathname !== '/') return;
         // if (scrollY === 0) {
         //     setIsOn(true);
         // }
@@ -172,11 +184,18 @@ const Header: React.FC = () => {
     };
 
     const handleMouseLeaveNoIdx = () => {
-        if (location.pathname !== '/') return;
-        if (scrollY > 0) {
+        // // if (location.pathname !== '/') return;
+        // if (scrollY > 0) {
+        //     setIsOn(true);
+        // } else {
+        //     setIsOn(false);
+        // }
+
+        if (location.pathname !== '/') {
+            // return;
             setIsOn(true);
         } else {
-            setIsOn(false);
+            scrollY > 0 ? setIsOn(true) : setIsOn(false);
         }
     };
 
@@ -203,6 +222,9 @@ const Header: React.FC = () => {
                             onMouseLeave={handleMouseLeave}
                             ref={el => (tabsliRef.current[0] = el)}
                         >
+                            {/* <Link className="gnb-link" to="/brand">
+                                BRAND
+                            </Link> */}
                             <a className="gnb-link" href="/brand">
                                 BRAND
                             </a>

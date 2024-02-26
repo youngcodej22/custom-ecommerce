@@ -12,6 +12,7 @@ import ErrorPage from './pages/ErrorPage/ErrorPage';
 import Home from './pages/Home/Home';
 import ProductList from './pages/ProductList/ProductList';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
+import Brand from './pages/Brand/Brand';
 
 // let router = createBrowserRouter([
 const router = createBrowserRouter([
@@ -38,6 +39,12 @@ const router = createBrowserRouter([
                 index: true,
                 path: '/productdetail',
                 element: <ProductDetail />,
+                // exact: true,
+            },
+            {
+                index: true,
+                path: '/brand',
+                element: <Brand />,
                 // exact: true,
             },
         ],
