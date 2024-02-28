@@ -49,24 +49,3 @@ const Layout: React.FC = () => {
 };
 
 export default Layout;
-
-/* <nav>
-<ul>
-    <li>
-        <Link to="/">Home</Link>
-    </li>
-    <li>
-        <Link to="/todos">Todos</Link>
-    </li>
-    <li>
-        <Link to="/deferred">Deferred</Link>
-    </li>
-    <li>
-        <Link to="/404">404 Link</Link>
-    </li>
-    <li>
-        <button onClick={() => revalidator.revalidate()}>Revalidate Data</button>
-    </li>
-</ul>
-</nav>
-<Outlet /> */

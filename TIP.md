@@ -179,3 +179,9 @@ https://www.youtube.com/watch?v=eFPvXGZETiY
 
 ## reset 문제
 https://velog.io/@teo/2022-CSS-Reset-%EB%8B%A4%EC%8B%9C-%EC%8D%A8%EB%B3%B4%EA%B8%B0
+
+## react로 scroll lib
+
+- [customhook](https://shylog.com/react-custom-hooks-scroll-animation-fadein/)
+- [react-scroll](https://www.npmjs.com/package/react-scroll)
+- [aos](https://michalsnik.github.io/aos/)

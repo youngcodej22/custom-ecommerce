@@ -15,7 +15,8 @@
             // margin: 0 -5px;
 
             .md-pick-content {
-                width: 851px;
+                // width: 851px;
+                width: 50%;
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
@@ -220,9 +221,9 @@
                 display: flex;
             }
 
-            .swiper-pagination {
+            .swiper-pagination-bullets {
                 // margin: 20px 0;
-                // bottom: -10px;
+                bottom: 0px;
 
                 .swiper-pagination-bullet {
                     width: 12px;
