@@ -140,6 +140,53 @@ table {
   border-spacing: 0;
 }
 
+dl, ul, ol, li {
+  list-style: none;
+}
+
+fieldset, img {
+  border: 0 none;
+  vertical-align: top;
+}
+
+input, select, textarea, button {
+  vertical-align: middle;
+}
+
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input:-moz-read-only {
+  background: #f9f9f9;
+  cursor: default;
+}
+
+input:read-only {
+  background: #f9f9f9;
+  cursor: default;
+}
+
+a {
+  color: #242424;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  text-decoration: none;
+}
+
+th {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+td {
+  font-size: 16px;
+}
+
 body {
   font-family: "Montserrat", "Nanum Gothic", sans-serif;
   font-size: 16px;

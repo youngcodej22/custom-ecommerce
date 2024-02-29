@@ -20,13 +20,15 @@
   color: inherit;
 }
 .insta-cont .insta-box {
+  display: flex;
+  justify-content: center;
   width: 100%;
   box-sizing: border-box;
   padding: 40px 80px 0px;
 }
 .insta-cont .insta-box img {
-  width: calc(16.6666% - 15px);
+  width: calc(16.66666% - 20px);
 }
 .insta-cont .insta-box img:not(:first-child) {
-  margin-left: 5px;
+  margin-left: 20px;
 }/*# sourceMappingURL=Insta.css.map */

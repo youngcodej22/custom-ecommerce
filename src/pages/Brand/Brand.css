@@ -1,0 +1,52 @@
+.brand {
+  width: 100%;
+  padding: 0;
+}
+.brand .brand_section {
+  font-size: 22px;
+  word-break: keep-all;
+  padding: 60px 0;
+}
+.brand .brand_section .brand_title_wrap {
+  position: relative;
+}
+.brand .brand_section .brand_title_wrap .brand_title {
+  font-size: 54px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.6em;
+}
+.brand .brand_section .full_inner {
+  text-align: center;
+}
+.brand .brand_section .full_inner .brand_img {
+  margin: 35px 0;
+  text-align: center;
+}
+.brand .brand_section .full_inner .brand_img:first-child {
+  margin-top: 0;
+}
+.brand .brand_section .full_inner .brand_img img {
+  max-width: 100%;
+}
+.brand .brand_section .layout_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.brand .brand_section .layout_inner .brand_column_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  /*padding: 30px 0;*/
+}
+.brand .brand_section .layout_inner .brand_column_wrap .brand_column {
+  padding: 0 15px;
+  margin: 20px 0;
+  box-sizing: border-box;
+}
+.brand .brand_section .layout_inner .brand_column_wrap .brand_column .brand_sub_tit {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 0.7em;
+}/*# sourceMappingURL=Brand.css.map */

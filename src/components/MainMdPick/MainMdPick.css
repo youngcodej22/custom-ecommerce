@@ -11,7 +11,7 @@
   padding-bottom: 37px;
 }
 .main-md-pick .md-pick-wrap ul.swiper-wrapper .md-pick-content {
-  width: 851px;
+  width: 50%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -174,11 +174,14 @@
 .main-md-pick .md-pick-wrap .swiper .swiper-slide {
   display: flex;
 }
-.main-md-pick .md-pick-wrap .swiper .swiper-pagination .swiper-pagination-bullet {
+.main-md-pick .md-pick-wrap .swiper .swiper-pagination-bullets {
+  bottom: 0px;
+}
+.main-md-pick .md-pick-wrap .swiper .swiper-pagination-bullets .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   margin-right: 15px;
 }
-.main-md-pick .md-pick-wrap .swiper .swiper-pagination .swiper-pagination-bullet-active {
+.main-md-pick .md-pick-wrap .swiper .swiper-pagination-bullets .swiper-pagination-bullet-active {
   background-color: #0AD09C;
 }/*# sourceMappingURL=MainMdPick.css.map */

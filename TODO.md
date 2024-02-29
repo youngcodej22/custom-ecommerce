@@ -25,3 +25,6 @@ https://github.com/remix-run/react-router
 - [ ] Header > useEffect 다음에 왜 setIsOn(true) 인데 false가 나오지?
 
 - [ ] item-cont>item-photo-box 컴포넌트화 하기
+
+## Question
+1. scss 계층구조를 모두 이용하는게 좋은 방법일까? 공통 스타일은 어차피 공통으로 뺄거고

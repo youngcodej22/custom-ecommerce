@@ -1,10 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+import brand_s1_01 from '/assets/brand/brand_s1_01.jpg';
+import brand_s1_bg from '/assets/brand/brand_s1_bg.png';
+import brand_s2_01 from '/assets/brand/brand_s2_01.png';
+import brand_s2_02 from '/assets/brand/brand_s2_02.jpg';
+import brand_s2_03 from '/assets/brand/brand_s2_03.jpg';
+import brand_s2_04 from '/assets/brand/brand_s2_04.jpg';
+import brand_s3_01 from '/assets/brand/brand_s3_01.png';
+import brand_s3_02 from '/assets/brand/brand_s3_02.jpg';
+import brand_s3_03 from '/assets/brand/brand_s3_03.jpg';
+import brand_s3_04 from '/assets/brand/brand_s3_04.png';
+import brand_s3_05 from '/assets/brand/brand_s3_05.png';
+import brand_s3_06 from '/assets/brand/brand_s3_06.jpg';
+import brand_s4_01 from '/assets/brand/brand_s4_01.jpg';
+import brand_s4_02 from '/assets/brand/brand_s4_02.jpg';
+import brand_s4_03 from '/assets/brand/brand_s4_03.jpg';
+import brand_s4_04 from '/assets/brand/brand_s4_04.png';
+import brand_s4_bg from '/assets/brand/brand_s4_bg.png';
+import brand_s5_01 from '/assets/brand/brand_s5_01.jpg';
+import brand_s5_02 from '/assets/brand/brand_s5_02.jpg';
+import brand_s5_03 from '/assets/brand/brand_s5_03.jpg';
+import brand_s5_04 from '/assets/brand/brand_s5_04.jpg';
+import brand_s5_05 from '/assets/brand/brand_s5_05.png';
 
 import './Brand.scss';
 
 // aos css scroll package 필요
 
 const Brand = () => {
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
     return (
         <div className="brand">
             {/* <div id="container" style="min-height: 412px; padding-top: 100px"> */}
@@ -31,7 +61,8 @@ const Brand = () => {
                     >
                         불멸의 전사 "하이랜더"의 고향이자,
                         <br />
-                        척박하고 험준한 지형의 스코틀랜드 최북단, 하이랜드. <br />
+                        척박하고 험준한 지형의 스코틀랜드 최북단, 하이랜드.{' '}
+                        <br />
                         맥케이슨의 정신은 이 곳에서부터 시작합니다.
                     </p>
                     <div
@@ -40,10 +71,7 @@ const Brand = () => {
                         data-aos-duration="1000"
                         data-aos-offset="300"
                     >
-                        <img
-                            src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/brand_1-1_230727.jpg"
-                            alt=""
-                        />
+                        <img src={brand_s1_01} alt="브랜드 소개 사진" />
                     </div>
                 </div>
                 <div className="layout_inner">
@@ -55,10 +83,7 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/manuforti_img_e.png"
-                                    alt=""
-                                />
+                                <img src={brand_s2_01} alt="" />
                             </div>
                         </div>
                         <div
@@ -72,10 +97,15 @@ const Brand = () => {
                                 <br />
                                 MANU FORTI. (마누 포르티)
                             </h3>
-                            <p>"강인한 손"을 뜻하는 게일어로 하이랜더를 대표하는 불굴의 정신을 나타냅니다.</p>
                             <p>
-                                이것은 위대한 전사를 나타낼 뿐만 아니라, 수 없이 치른 전투와 전쟁 속에서도 <br />
-                                상대를 적대시하지 않는 유연함과 관대함을 나타내는 그들의 정신입니다.
+                                "강인한 손"을 뜻하는 게일어로 하이랜더를
+                                대표하는 불굴의 정신을 나타냅니다.
+                            </p>
+                            <p>
+                                이것은 위대한 전사를 나타낼 뿐만 아니라, 수 없이
+                                치른 전투와 전쟁 속에서도 <br />
+                                상대를 적대시하지 않는 유연함과 관대함을
+                                나타내는 그들의 정신입니다.
                             </p>
                         </div>
                     </article>
@@ -87,10 +117,7 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/230912_brand_mckay01.jpg"
-                                    alt=""
-                                />
+                                <img src={brand_s2_02} alt="" />
                             </div>
                         </div>
                         <div
@@ -100,10 +127,7 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/230912_brand_mckay02.jpg"
-                                    alt=""
-                                />
+                                <img src={brand_s2_03} alt="" />
                             </div>
                         </div>
                         <div
@@ -113,10 +137,7 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/230912_brand_mckay03.jpg"
-                                    alt=""
-                                />
+                                <img src={brand_s2_04} alt="" />
                             </div>
                         </div>
                         <div
@@ -141,7 +162,9 @@ const Brand = () => {
                             data-aos-duration="1000"
                             data-aos-offset="300"
                         >
-                            <h3 className="brand_sub_tit">The Honourable Company of Edinburgh Golfers</h3>
+                            <h3 className="brand_sub_tit">
+                                The Honourable Company of Edinburgh Golfers
+                            </h3>
                         </div>
                         <div
                             className="brand_column column_1 aos-init"
@@ -150,10 +173,7 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/edinburgh_img_e.png"
-                                    alt=""
-                                />
+                                <img src={brand_s3_01} alt="" />
                             </div>
                         </div>
                         <div
@@ -173,10 +193,7 @@ const Brand = () => {
                                 <br />
                             </p>
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/brand_2_230728.jpg"
-                                    alt=""
-                                />
+                                <img src={brand_s3_02} alt="" />
                             </div>
                         </div>
                         <div
@@ -192,14 +209,12 @@ const Brand = () => {
                                 최초의 골프 동호인 클럽을 설립하고
                                 <br />
                                 <br />
-                                최초로 골프 규칙을 재정하는 역사의 중심에서 <br />
+                                최초로 골프 규칙을 재정하는 역사의 중심에서{' '}
+                                <br />
                                 ‘마누 포르티’ 정신을 찾을 수 있습니다.
                             </p>
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/brand_5_230728.jpg"
-                                    alt=""
-                                />
+                                <img src={brand_s3_03} alt="" />
                             </div>
                         </div>
                         <div
@@ -210,8 +225,9 @@ const Brand = () => {
                         >
                             <p>
                                 <strong>
-                                    하이랜더 정신은 전사의 손에서 장인의 손으로 변화하여, 스코틀랜드와 유럽, 그리고
-                                    전세계로 뻗어나가게 됩니다.
+                                    하이랜더 정신은 전사의 손에서 장인의 손으로
+                                    변화하여, 스코틀랜드와 유럽, 그리고 전세계로
+                                    뻗어나가게 됩니다.
                                 </strong>
                             </p>
                         </div>
@@ -224,15 +240,13 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/brand01_9_e.png"
-                                    alt=""
-                                />
+                                <img src={brand_s3_04} alt="" />
                             </div>
                             <dl>
                                 <dt>THISTLE GOLF CLUB</dt>
                                 <dd>
-                                    미국 노스캐롤라이나에 있는 클럽. 스코틀랜드 씨슬을 상징으로 하며 “맥케이”, “캐머런”,
+                                    미국 노스캐롤라이나에 있는 클럽. 스코틀랜드
+                                    씨슬을 상징으로 하며 “맥케이”, “캐머런”,
                                     “스튜어트”
                                     <br />
                                     3개의 코스를 보유하고 있습니다.
@@ -246,10 +260,7 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/brand01_8_e.png"
-                                    alt=""
-                                />
+                                <img src={brand_s3_05} alt="" />
                             </div>
                             <dl>
                                 <dt>MACKAY GOLF CLUB</dt>
@@ -269,15 +280,13 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/brand_3_230731.jpg"
-                                    alt=""
-                                />
+                                <img src={brand_s3_06} alt="" />
                             </div>
                             <dl>
                                 <dt>MAC &amp; SON COMPANY</dt>
                                 <dd>
-                                    가장 오래되고 유명했던 가족 기업으로, 창업주 제임스에 브런츠필드에서 시작. <br />
+                                    가장 오래되고 유명했던 가족 기업으로, 창업주
+                                    제임스에 브런츠필드에서 시작. <br />
                                     1845년 머셀버러 대회에서 우수성과 <br />
                                     장인 정신을 인정 받았습니다.
                                 </dd>
@@ -311,7 +320,8 @@ const Brand = () => {
                             <p>
                                 <strong>FLOWER OF SCOTLAND.</strong>
                                 <br />
-                                강인하면서도 상대를 존중하고 화합할 줄 아는 <br />
+                                강인하면서도 상대를 존중하고 화합할 줄 아는{' '}
+                                <br />
                                 하이랜더 "맥케이"의 유연한 정신은, <br />
                                 스코틀랜드의 상징 씨슬(엉겅퀴)로 표현됩니다.
                             </p>
@@ -323,7 +333,8 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <p>
-                                골프, 하이랜드, 킬트, 클레이모어, 타탄체크, 스카치위스키. <br />
+                                골프, 하이랜드, 킬트, 클레이모어, 타탄체크,
+                                스카치위스키. <br />
                                 스코틀랜드를 상징하는 것은 많지만, <br />
                                 마누 포르티를 대변하며 용감함과 유연함을 동시에
                                 <br />
@@ -340,10 +351,7 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/brand_brave_01_230728.jpg"
-                                    alt=""
-                                />
+                                <img src={brand_s4_01} alt="" />
                             </div>
                             <h3 className="brand_sub_tit">
                                 불모지의 투박한 야생화에서
@@ -358,10 +366,7 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/brand_brave_02_230728.jpg"
-                                    alt=""
-                                />
+                                <img src={brand_s4_02} alt="" />
                             </div>
                             <p>
                                 거친 땅에서 자라는 야생의 씨슬은
@@ -378,10 +383,7 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/brand_brave_03_230728.jpg"
-                                    alt=""
-                                />
+                                <img src={brand_s4_03} alt="" />
                             </div>
                             <p>
                                 나라를 지켜낸 꽃에서 스코틀랜드의 국화로,
@@ -400,19 +402,26 @@ const Brand = () => {
                         data-aos-duration="1000"
                         data-aos-offset="300"
                     >
-                        <img
-                            src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/brand02_2.png"
-                            alt=""
-                        />
+                        <img src={brand_s4_04} alt="" />
                     </div>
-                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300" className="aos-init">
+                    <p
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-offset="300"
+                        className="aos-init"
+                    >
                         일상 곳곳에 스며있는 씨슬은 그렇게 <br />
                         스코틀랜드의 정체성과 자긍심의 상징이 되었습니다.
                     </p>
                 </div>
             </section>
             <section className="brand_section brand_section_03">
-                <h2 className="brand_title aos-init" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">
+                <h2
+                    className="brand_title aos-init"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-offset="300"
+                >
                     classNameIC, BUT FLEX.
                 </h2>
                 <div className="full_inner align_center">
@@ -422,10 +431,7 @@ const Brand = () => {
                         data-aos-duration="1000"
                         data-aos-offset="300"
                     >
-                        <img
-                            src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/brand03_4_230720.jpg"
-                            alt=""
-                        />
+                        <img src={brand_s5_01} alt="" />
                     </div>
                     <h3
                         className="brand_sub_tit aos-init"
@@ -438,7 +444,12 @@ const Brand = () => {
                         <br />
                         현대적으로 재해석되어 이어집니다.
                     </h3>
-                    <p data-aos-duration="1000" data-aos="fade-up" data-aos-offset="300" className="aos-init">
+                    <p
+                        data-aos-duration="1000"
+                        data-aos="fade-up"
+                        data-aos-offset="300"
+                        className="aos-init"
+                    >
                         스코틀랜드의 유산을 바탕으로 트렌디함을 더한
                         <br />
                         스코틀랜드 클래식 골프웨어로서,
@@ -459,10 +470,7 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/brand_classNameic_02_230728.jpg"
-                                    alt=""
-                                />
+                                <img src={brand_s5_02} alt="" />
                             </div>
                         </div>
                         <div
@@ -472,10 +480,7 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/brand_classNameic_03_230728.jpg"
-                                    alt=""
-                                />
+                                <img src={brand_s5_03} alt="" />
                             </div>
                         </div>
                         <div
@@ -485,10 +490,7 @@ const Brand = () => {
                             data-aos-offset="300"
                         >
                             <div className="brand_img">
-                                <img
-                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/brand_classNameic_04_230728.jpg"
-                                    alt=""
-                                />
+                                <img src={brand_s5_04} alt="" />
                             </div>
                         </div>
                     </article>
@@ -536,11 +538,7 @@ const Brand = () => {
                         data-aos-duration="1000"
                         data-aos-offset="300"
                     >
-                        <img
-                            src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/img/service/point_label_new.png"
-                            alt=""
-                            width="14.9%"
-                        />
+                        <img src={brand_s5_05} alt="" width="14.9%" />
                     </div>
                 </div>
             </section>

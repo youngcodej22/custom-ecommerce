@@ -64,7 +64,7 @@
                                     padding-left: 5px;
                                 }
                             }
-                        }   
+                        }
                         ul {
                             // display: none;
                             position: absolute;
@@ -179,7 +179,7 @@
                                         cursor: pointer;
                                         color: #999999;
                                         font-weight: 300;
-                                    } 
+                                    }
                                 }
                             }
                         }
@@ -213,7 +213,6 @@
                                     margin-bottom: 35px;
 
                                     .cate_box {
-                                        
                                         &:first-child {
                                             margin: 0;
                                         }
@@ -238,7 +237,7 @@
                                                             cursor: pointer;
                                                             font-weight: 500;
                                                         }
-                                                        
+
                                                         span {
                                                             display: block;
                                                             padding: 12px 0;
@@ -255,7 +254,8 @@
                                                                 a {
                                                                     display: block;
                                                                     color: #999999;
-                                                                    padding: 3px 0;
+                                                                    padding: 3px
+                                                                        0;
                                                                     padding-left: 20px;
                                                                     font-size: 16px;
                                                                 }
@@ -280,7 +280,6 @@
 
                                         a {
                                             img {
-
                                             }
                                         }
                                     }
@@ -291,12 +290,13 @@
 
                                 .option_toggle_btn {
                                     cursor: pointer;
-                                    background: url(../../../public/assets/icon/icon-bottom.png) no-repeat 100% 12px;
+                                    background: url(../../../public/assets/icon/icon-bottom.png)
+                                        no-repeat 100% 12px;
                                     padding: 10px 0 24px 0;
                                     font-size: 16px;
                                     font-weight: 500;
                                 }
-                                
+
                                 .gender {
                                     dd {
                                         display: none;
@@ -356,7 +356,8 @@
                                                     font-size: 0;
                                                     padding: 0;
                                                     cursor: pointer;
-                                                    border: 1px solid transparent;
+                                                    border: 1px solid
+                                                        transparent;
 
                                                     .bg {
                                                         display: flex;
@@ -365,11 +366,13 @@
                                                         width: 48px;
                                                         height: 48px;
                                                         margin: 0 auto;
-                                                        border: 1px solid transparent;
+                                                        border: 1px solid
+                                                            transparent;
 
                                                         span {
                                                             background: #ffffff;
-                                                            border: 1px solid #ddd;
+                                                            border: 1px solid
+                                                                #ddd;
                                                             width: 40px;
                                                             height: 40px;
                                                         }
@@ -382,7 +385,6 @@
                                             }
                                         }
                                     }
-                                    
                                 }
 
                                 .size {
@@ -390,14 +392,12 @@
                                         .button_list {
                                             li {
                                                 input {
-
                                                 }
                                                 label {
-
                                                 }
                                             }
                                         }
-                                    }    
+                                    }
                                 }
 
                                 .weather {
@@ -406,7 +406,8 @@
                                             li {
                                                 input {
                                                 }
-                                                label {}
+                                                label {
+                                                }
                                             }
                                         }
                                     }
@@ -423,9 +424,10 @@
                                             background: #999999;
                                             margin: 10px 0;
                                             width: calc(100% - 7px);
-                                            
+
                                             border-radius: 4px;
-                                            box-shadow: inset 0 1px 1px #f0f0f0, 0 3px 6px -5px #bbbbbb;
+                                            box-shadow: inset 0 1px 1px #f0f0f0,
+                                                0 3px 6px -5px #bbbbbb;
 
                                             .noUi-base {
                                                 width: 100%;
@@ -442,7 +444,11 @@
                                                     position: relative;
 
                                                     .noUi-connnet {
-                                                        transform: translate(0%, 0px) scale(1, 1);
+                                                        transform: translate(
+                                                                0%,
+                                                                0px
+                                                            )
+                                                            scale(1, 1);
                                                         background: #242424;
                                                         // background: #3fb8af;
 
@@ -459,7 +465,10 @@
                                                 }
 
                                                 .noUi-origin {
-                                                    transform: translate(-100%, 0px);
+                                                    transform: translate(
+                                                        -100%,
+                                                        0px
+                                                    );
                                                     z-index: 5;
                                                     width: calc(100% - 5px);
                                                     height: 0;
@@ -482,7 +491,8 @@
                                                         border-radius: 50%;
                                                         top: -5px;
                                                         right: -8px;
-                                                        border: 1px solid #d9d9d9;
+                                                        border: 1px solid
+                                                            #d9d9d9;
 
                                                         .noUi-touch-area {
                                                             height: 100%;
@@ -594,10 +604,18 @@
                                                         position: absolute;
                                                         left: 50%;
                                                         top: 50%;
-                                                        transform: translate(-50%, -50%);
+                                                        transform: translate(
+                                                            -50%,
+                                                            -50%
+                                                        );
                                                         width: 100%;
                                                         height: 100%;
-                                                        background: rgba(0,0,0,0.2);
+                                                        background: rgba(
+                                                            0,
+                                                            0,
+                                                            0,
+                                                            0.2
+                                                        );
                                                         display: none;
 
                                                         button {
@@ -606,16 +624,14 @@
                                                             height: 80px;
                                                             pointer-events: auto;
                                                             display: none;
-                                                        };
+                                                        }
 
                                                         .btn_basket_get {
                                                             img {
-
                                                             }
                                                         }
                                                         .btn_basket_cart {
                                                             img {
-
                                                             }
                                                         }
                                                     }
@@ -652,9 +668,7 @@
                                                         a {
                                                             color: #242424;
                                                             text-decoration: none;
-
                                                         }
-
                                                     }
                                                     a {
                                                         // reset
@@ -698,7 +712,6 @@
 
                                                 .item_icon_box {
                                                     .middle {
-
                                                     }
                                                 }
 
@@ -725,7 +738,7 @@
                 margin: 20px 0 0 0;
 
                 ul {
-                    padding: 20px 0 0;;
+                    padding: 20px 0 0;
                     text-align: center;
 
                     li {
@@ -761,14 +774,12 @@
                     .btn_page_next {
                         a {
                             img {
-
                             }
                         }
                     }
                     .btn_page_last {
                         a {
                             img {
-
                             }
                         }
                     }
