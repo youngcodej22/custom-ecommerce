@@ -235,3 +235,10 @@ export default defineConfig({
 
 -   [익스텐션](https://inpa.tistory.com/entry/VSCode-%F0%9F%92%BD-SCSS-%EC%BD%94%EB%94%A9%ED%95%98%EB%8A%94%EB%8D%B0-%EC%9C%A0%EC%9A%A9%ED%95%9C-%ED%99%95%EC%9E%A5%ED%8C%A9-%F0%9F%92%AF-%EC%B6%94%EC%B2%9C)
 -   [참고](https://yozm.wishket.com/magazine/detail/2082/)
+
+## 크롬 브라우저 개발자도구를 통한 코드작성
+
+개발자도구>source탭>Workspace>add folder>내 프로젝트 폴더 넣기
+해당 파일 예,scss를 변경시 바로 반영되고 vscode에 자동 동기화 된다.
+
+-   [ref](https://inpa.tistory.com/entry/%F0%9F%92%BB-%ED%81%AC%EB%A1%AC-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%8F%84%EA%B5%AC-F12-%F0%9F%94%8D-%ED%99%9C%EC%9A%A9%EB%B2%95-%F0%9F%92%AF-%EC%A0%95%EB%A6%AC-Elements%ED%8E%B8)

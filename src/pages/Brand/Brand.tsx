@@ -416,14 +416,14 @@ const Brand = () => {
                 </div>
             </section>
             <section className="brand_section brand_section_03">
-                <h2
-                    className="brand_title aos-init"
+                <div
+                    className="brand_title_wrap aos-init"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-offset="300"
                 >
-                    classNameIC, BUT FLEX.
-                </h2>
+                    <h2 className="brand_title">CLASSIC, BUT FLEX.</h2>
+                </div>
                 <div className="full_inner align_center">
                     <div
                         className="brand_img aos-init"
