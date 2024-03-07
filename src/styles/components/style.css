@@ -140,16 +140,22 @@ table {
   border-spacing: 0;
 }
 
-dl, ul, ol, li {
+dl,
+ul,
+ol,
+li {
   list-style: none;
 }
 
-fieldset, img {
+fieldset,
+img {
   border: 0 none;
-  vertical-align: top;
 }
 
-input, select, textarea, button {
+input,
+select,
+textarea,
+button {
   vertical-align: middle;
 }
 
@@ -174,7 +180,8 @@ a {
   text-decoration: none;
 }
 
-a:active, a:hover {
+a:active,
+a:hover {
   text-decoration: none;
 }
 

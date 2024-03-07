@@ -612,7 +612,7 @@ const Header: React.FC = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="" className="btn-cart">
+                            <a href="/cart" className="btn-cart">
                                 {isOn ? <img src={btnCartBlack} alt="검색" /> : <img src={btnCart} alt="검색" />}
                                 <span>장바구니</span>
                             </a>

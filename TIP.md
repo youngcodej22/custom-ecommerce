@@ -242,3 +242,12 @@ export default defineConfig({
 해당 파일 예,scss를 변경시 바로 반영되고 vscode에 자동 동기화 된다.
 
 -   [ref](https://inpa.tistory.com/entry/%F0%9F%92%BB-%ED%81%AC%EB%A1%AC-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%8F%84%EA%B5%AC-F12-%F0%9F%94%8D-%ED%99%9C%EC%9A%A9%EB%B2%95-%F0%9F%92%AF-%EC%A0%95%EB%A6%AC-Elements%ED%8E%B8)
+
+## html to scss , css to scss
+
+1. jsxtoSCSS extension > jsx요소들만 드래그 > ctrl+shift+p > jsxtoscss > 복사 후 > scss파일에 붙여넣기
+2. [css2sass](https://css2sass.herokuapp.com/) 를 통해서 css 파일을 scss로 변환
+
+## devtool tip 사이트
+
+https://devtoolstips.org/

@@ -35,3 +35,4 @@
     -   [ref](https://inpa.tistory.com/entry/VS-Code-%E2%8F%B1%EF%B8%8F-HTML-CSS-%EB%8F%84%EA%B5%AC-%EC%B6%94%EC%B2%9C#html_css_support)
 -   [x] CSS를 SCSS로 변경
     -   [ref](https://css2sass.herokuapp.com/)
+

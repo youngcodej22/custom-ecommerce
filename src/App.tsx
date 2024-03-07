@@ -13,6 +13,7 @@ import Home from './pages/Home/Home';
 import ProductList from './pages/ProductList/ProductList';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import Brand from './pages/Brand/Brand';
+import Cart from './pages/Cart/Cart';
 
 // let router = createBrowserRouter([
 const router = createBrowserRouter([
@@ -45,6 +46,12 @@ const router = createBrowserRouter([
                 index: true,
                 path: '/brand',
                 element: <Brand />,
+                // exact: true,
+            },
+            {
+                index: true,
+                path: '/cart',
+                element: <Cart />,
                 // exact: true,
             },
         ],
