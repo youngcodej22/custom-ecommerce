@@ -204,11 +204,19 @@ const Header: React.FC = () => {
             {/* <header id="header-nav" className={(isOn && scrollY > 0) || isOn ? 'on' : ''}> */}
             <header id="header-nav" className={isOn ? 'on' : ''}>
                 <div className="logo">
-                    <a href="/">{isOn ? <img src={logoBlackPC} alt="로고" /> : <img src={logoWhitePC} alt="로고" />}</a>
+                    <a href="/">
+                        {isOn ? (
+                            <img src={logoBlackPC} alt="로고" />
+                        ) : (
+                            <img src={logoWhitePC} alt="로고" />
+                        )}
+                    </a>
                 </div>
                 <div className="gnb">
                     <ul
-                        className={isActiveBg ? 'gnb-wrap active-bg' : 'gnb-wrap'}
+                        className={
+                            isActiveBg ? 'gnb-wrap active-bg' : 'gnb-wrap'
+                        }
                         onMouseEnter={handleActiveBgEnter}
                         onMouseLeave={handleActiveBgLeave}
                     >
@@ -229,7 +237,13 @@ const Header: React.FC = () => {
                                 BRAND
                             </a>
                             {/* <div className="gnb-deps1"> */}
-                            <div className={isActive === 0 ? 'gnb-deps1 active' : 'gnb-deps1'}>
+                            <div
+                                className={
+                                    isActive === 0
+                                        ? 'gnb-deps1 active'
+                                        : 'gnb-deps1'
+                                }
+                            >
                                 <ul>
                                     <li>
                                         <a href="">LOOKBOOK</a>
@@ -255,7 +269,13 @@ const Header: React.FC = () => {
                             <a className="gnb-link" href="/productlist">
                                 NEW
                             </a>
-                            <div className={isActive === 1 ? 'gnb-deps1 active' : 'gnb-deps1'}>
+                            <div
+                                className={
+                                    isActive === 1
+                                        ? 'gnb-deps1 active'
+                                        : 'gnb-deps1'
+                                }
+                            >
                                 <ul>
                                     <li>
                                         <a href="">겨울 컬렉션</a>
@@ -325,7 +345,13 @@ const Header: React.FC = () => {
                             <a className="gnb-link" href="/productlist">
                                 WOMEN
                             </a>
-                            <div className={isActive === 2 ? 'gnb-deps1 active' : 'gnb-deps1'}>
+                            <div
+                                className={
+                                    isActive === 2
+                                        ? 'gnb-deps1 active'
+                                        : 'gnb-deps1'
+                                }
+                            >
                                 <ul>
                                     <li>
                                         <a href="">상의</a>
@@ -384,7 +410,13 @@ const Header: React.FC = () => {
                             <a className="gnb-link" href="">
                                 MEN
                             </a>
-                            <div className={isActive === 3 ? 'gnb-deps1 active' : 'gnb-deps1'}>
+                            <div
+                                className={
+                                    isActive === 3
+                                        ? 'gnb-deps1 active'
+                                        : 'gnb-deps1'
+                                }
+                            >
                                 <ul>
                                     <li>
                                         <a href="">상의</a>
@@ -437,7 +469,13 @@ const Header: React.FC = () => {
                             <a className="gnb-link" href="">
                                 ACC
                             </a>
-                            <div className={isActive === 4 ? 'gnb-deps1 active' : 'gnb-deps1'}>
+                            <div
+                                className={
+                                    isActive === 4
+                                        ? 'gnb-deps1 active'
+                                        : 'gnb-deps1'
+                                }
+                            >
                                 <ul>
                                     <li>
                                         <a href="">모자</a>
@@ -516,7 +554,13 @@ const Header: React.FC = () => {
                             <a className="gnb-link" href="">
                                 OUTLET
                             </a>
-                            <div className={isActive === 5 ? 'gnb-deps1 active' : 'gnb-deps1'}>
+                            <div
+                                className={
+                                    isActive === 5
+                                        ? 'gnb-deps1 active'
+                                        : 'gnb-deps1'
+                                }
+                            >
                                 <ul>
                                     <li>
                                         <a href="">여성</a>
@@ -563,7 +607,7 @@ const Header: React.FC = () => {
                         <li className="gnb-li promotion">
                             <a
                                 className="gnb-link"
-                                href=""
+                                href="/promotion"
                                 onMouseEnter={handleMouseEnterNoIdx}
                                 onMouseLeave={handleMouseLeaveNoIdx}
                             >
@@ -596,30 +640,50 @@ const Header: React.FC = () => {
                     <ul>
                         <li>
                             {/* {isOn ? ( */}
-                            {isOn ? <img src={btnSearchBlack} alt="검색" /> : <img src={btnSearch} alt="검색" />}
+                            {isOn ? (
+                                <img src={btnSearchBlack} alt="검색" />
+                            ) : (
+                                <img src={btnSearch} alt="검색" />
+                            )}
                             <span>검색</span>
                         </li>
                         <li>
                             <a href="" className="btn-login">
-                                {isOn ? <img src={btnLoginBlack} alt="검색" /> : <img src={btnLogin} alt="검색" />}
+                                {isOn ? (
+                                    <img src={btnLoginBlack} alt="검색" />
+                                ) : (
+                                    <img src={btnLogin} alt="검색" />
+                                )}
                                 <span>로그인</span>
                             </a>
                         </li>
                         <li>
                             <a href="" className="btn-mypage">
-                                {isOn ? <img src={btnMypageBlack} alt="검색" /> : <img src={btnMypage} alt="검색" />}
+                                {isOn ? (
+                                    <img src={btnMypageBlack} alt="검색" />
+                                ) : (
+                                    <img src={btnMypage} alt="검색" />
+                                )}
                                 <span>마이페이지</span>
                             </a>
                         </li>
                         <li>
                             <a href="/cart" className="btn-cart">
-                                {isOn ? <img src={btnCartBlack} alt="검색" /> : <img src={btnCart} alt="검색" />}
+                                {isOn ? (
+                                    <img src={btnCartBlack} alt="검색" />
+                                ) : (
+                                    <img src={btnCart} alt="검색" />
+                                )}
                                 <span>장바구니</span>
                             </a>
                         </li>
                         <li>
                             <a href="" className="btn-service">
-                                {isOn ? <img src={btnServiceBlack} alt="검색" /> : <img src={btnService} alt="검색" />}
+                                {isOn ? (
+                                    <img src={btnServiceBlack} alt="검색" />
+                                ) : (
+                                    <img src={btnService} alt="검색" />
+                                )}
                                 <span>고객센터</span>
                             </a>
                         </li>
@@ -659,8 +723,15 @@ const Header: React.FC = () => {
                                     alt="검색"
                                 />
                             </div>
-                            <div className="search-keywordList-wrap" style={{ display: 'none' }}>
-                                <input type="hidden" name="recentCount" value="10" />
+                            <div
+                                className="search-keywordList-wrap"
+                                style={{ display: 'none' }}
+                            >
+                                <input
+                                    type="hidden"
+                                    name="recentCount"
+                                    value="10"
+                                />
                                 <div className="search-keywordList">
                                     <div className="search-recent-wrap">
                                         <dl>
@@ -669,7 +740,10 @@ const Header: React.FC = () => {
                                         </dl>
                                     </div>
                                     <div className="search-close-wrap">
-                                        <button type="button" className="btn-search-close">
+                                        <button
+                                            type="button"
+                                            className="btn-search-close"
+                                        >
                                             <strong>닫기</strong>
                                         </button>
                                     </div>

@@ -1,0 +1,11 @@
+.promotion .sub_content {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 45px 0 0 0;
+}
+.promotion .sub_content .content {
+  width: 100%;
+  min-height: 500px;
+  padding: 0;
+}/*# sourceMappingURL=Promotion.css.map */
