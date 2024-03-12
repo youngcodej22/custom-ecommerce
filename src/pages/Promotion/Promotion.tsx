@@ -1,6 +1,14 @@
 import React from 'react';
 
-// import iconNext from '/assets/icon/icon-pagination-next.png';
+import promotion_1 from '/assets/promotion/promotion-1.jpg';
+import promotion_2 from '/assets/promotion/promotion-2.jpg';
+import promotion_3 from '/assets/promotion/promotion-3.jpg';
+import promotion_4 from '/assets/promotion/promotion-4.jpg';
+import promotion_5 from '/assets/promotion/promotion-5.jpg';
+import labelHot from '/assets/label/label-hot.png';
+import iconChosen from '/assets/icon/icon-chosen.png';
+import iconBoardFile from '/assets/icon/icon-board-file.png';
+import iconBoardImg from '/assets/icon/icon-board-img.png';
 
 import './Promotion.scss';
 
@@ -47,7 +55,9 @@ const Promotion = () => {
                                                     <div className="board_img">
                                                         <a href="javascript:gd_btn_view('event',28 , 'y')">
                                                             <img
-                                                                src="https://godomall.speedycdn.net/e67c9795e05e8d4962cd2e383213d5eb/board/event/28/bee5f0fa16771f5d695"
+                                                                src={
+                                                                    promotion_1
+                                                                }
                                                                 width="580"
                                                                 height="315"
                                                                 className="js_image_load"
@@ -65,12 +75,16 @@ const Promotion = () => {
                                                                     Collaborat...
                                                                 </strong>
                                                                 <img
-                                                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/board/skin/event/img/icon/icon_board_attach_file.png"
+                                                                    src={
+                                                                        iconBoardFile
+                                                                    }
                                                                     alt="파일첨부 있음"
                                                                     className="dn"
                                                                 />
                                                                 <img
-                                                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/board/skin/event/img/icon/icon_board_attach_img.png"
+                                                                    src={
+                                                                        iconBoardImg
+                                                                    }
                                                                     alt="이미지첨부 있음"
                                                                     className="dn"
                                                                 />
@@ -96,7 +110,9 @@ const Promotion = () => {
                                                     <div className="board_img">
                                                         <a href="javascript:gd_btn_view('event',25 , 'y')">
                                                             <img
-                                                                src="https://godomall.speedycdn.net/e67c9795e05e8d4962cd2e383213d5eb/board/event/25/e53c044542f31d38692"
+                                                                src={
+                                                                    promotion_2
+                                                                }
                                                                 width="580"
                                                                 height="315"
                                                                 className="js_image_load"
@@ -113,12 +129,16 @@ const Promotion = () => {
                                                                     모집
                                                                 </strong>
                                                                 <img
-                                                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/board/skin/event/img/icon/icon_board_attach_file.png"
+                                                                    src={
+                                                                        iconBoardFile
+                                                                    }
                                                                     alt="파일첨부 있음"
                                                                     className="dn"
                                                                 />
                                                                 <img
-                                                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/board/skin/event/img/icon/icon_board_attach_img.png"
+                                                                    src={
+                                                                        iconBoardImg
+                                                                    }
                                                                     alt="이미지첨부 있음"
                                                                     className="dn"
                                                                 />
@@ -144,7 +164,9 @@ const Promotion = () => {
                                                     <div className="board_img">
                                                         <a href="javascript:gd_btn_view('event',23 , 'y')">
                                                             <img
-                                                                src="https://godomall.speedycdn.net/e67c9795e05e8d4962cd2e383213d5eb/board/event/23/cbd4d123139555db224"
+                                                                src={
+                                                                    promotion_3
+                                                                }
                                                                 width="580"
                                                                 height="315"
                                                                 className="js_image_load"
@@ -160,17 +182,23 @@ const Promotion = () => {
                                                                     상품권 런칭
                                                                 </strong>
                                                                 <img
-                                                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/board/skin/event/img/icon/icon_board_attach_file.png"
+                                                                    src={
+                                                                        iconBoardFile
+                                                                    }
                                                                     alt="파일첨부 있음"
                                                                     className="dn"
                                                                 />
                                                                 <img
-                                                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/board/skin/event/img/icon/icon_board_attach_img.png"
+                                                                    src={
+                                                                        iconBoardImg
+                                                                    }
                                                                     alt="이미지첨부 있음"
                                                                     className="dn"
                                                                 />
                                                                 <img
-                                                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/board/skin/event/img/icon/icon_board_hot.png"
+                                                                    src={
+                                                                        labelHot
+                                                                    }
                                                                     alt="인기글"
                                                                 />
                                                             </a>
@@ -195,7 +223,9 @@ const Promotion = () => {
                                                     <div className="board_img">
                                                         <a href="javascript:gd_btn_view('event',18 , 'y')">
                                                             <img
-                                                                src="https://godomall.speedycdn.net/e67c9795e05e8d4962cd2e383213d5eb/board/event/18/52fd4d6ba51db768464"
+                                                                src={
+                                                                    promotion_4
+                                                                }
                                                                 width="580"
                                                                 height="315"
                                                                 className="js_image_load"
@@ -213,17 +243,23 @@ const Promotion = () => {
                                                                     안내
                                                                 </strong>
                                                                 <img
-                                                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/board/skin/event/img/icon/icon_board_attach_file.png"
+                                                                    src={
+                                                                        iconBoardFile
+                                                                    }
                                                                     alt="파일첨부 있음"
                                                                     className="dn"
                                                                 />
                                                                 <img
-                                                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/board/skin/event/img/icon/icon_board_attach_img.png"
+                                                                    src={
+                                                                        iconBoardImg
+                                                                    }
                                                                     alt="이미지첨부 있음"
                                                                     className="dn"
                                                                 />
                                                                 <img
-                                                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/board/skin/event/img/icon/icon_board_hot.png"
+                                                                    src={
+                                                                        labelHot
+                                                                    }
                                                                     alt="인기글"
                                                                 />
                                                             </a>
@@ -247,7 +283,9 @@ const Promotion = () => {
                                                     <div className="board_img">
                                                         <a href="javascript:gd_btn_view('event',7 , 'y')">
                                                             <img
-                                                                src="https://godomall.speedycdn.net/e67c9795e05e8d4962cd2e383213d5eb/board/event/7/bb58f0d97e7a2722883"
+                                                                src={
+                                                                    promotion_5
+                                                                }
                                                                 width="580"
                                                                 height="315"
                                                                 className="js_image_load"
@@ -265,17 +303,23 @@ const Promotion = () => {
                                                                     혜택 안내
                                                                 </strong>
                                                                 <img
-                                                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/board/skin/event/img/icon/icon_board_attach_file.png"
+                                                                    src={
+                                                                        iconBoardFile
+                                                                    }
                                                                     alt="파일첨부 있음"
                                                                     className="dn"
                                                                 />
                                                                 <img
-                                                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/board/skin/event/img/icon/icon_board_attach_img.png"
+                                                                    src={
+                                                                        iconBoardImg
+                                                                    }
                                                                     alt="이미지첨부 있음"
                                                                     className="dn"
                                                                 />
                                                                 <img
-                                                                    src="https://mckayson.cdn-nhncommerce.com/data/skin/front/moment_C_C/board/skin/event/img/icon/icon_board_hot.png"
+                                                                    src={
+                                                                        labelHot
+                                                                    }
                                                                     alt="인기글"
                                                                 />
                                                             </a>
@@ -357,15 +401,34 @@ const Promotion = () => {
                                                     <b></b>
                                                 </div>
                                             </a>
-                                        </div>
-                                        <div className="chosen-drop">
-                                            <div className="chosen-search">
-                                                <input
-                                                    className="chosen-search-input"
-                                                    type="text"
-                                                />
+                                            <div className="chosen-drop">
+                                                <div className="chosen-search">
+                                                    <input
+                                                        className="chosen-search-input"
+                                                        type="text"
+                                                    />
+                                                </div>
+                                                <ul className="chosen-results">
+                                                    <li
+                                                        className="active-result result-selected"
+                                                        data-option-array-index="0"
+                                                    >
+                                                        제목
+                                                    </li>
+                                                    <li
+                                                        className="active-result"
+                                                        data-option-array-index="1"
+                                                    >
+                                                        내용
+                                                    </li>
+                                                    <li
+                                                        className="active-result"
+                                                        data-option-array-index="2"
+                                                    >
+                                                        작성자
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <ul className="chosen-results"></ul>
                                         </div>
 
                                         <input
@@ -385,8 +448,8 @@ const Promotion = () => {
                     <div className="addition_zone">
                         {/* <p></p><p><br></p><p></p> */}
                     </div>
-                    <form id="frmWritePassword">
-                        {/* <div id="lyPassword" className="dn layer_wrap password_layer" style="height: 226px"> */}
+                    {/* <form id="frmWritePassword">
+                    <div id="lyPassword" className="dn layer_wrap password_layer" style="height: 226px"> 
                         <div
                             id="lyPassword"
                             className="dn layer_wrap password_layer"
@@ -424,7 +487,7 @@ const Promotion = () => {
                                 </a>
                             </div>
                         </div>
-                    </form>
+                    </form> */}
                 </div>
             </div>
         </div>
